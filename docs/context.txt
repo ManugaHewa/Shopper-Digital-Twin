@@ -1,0 +1,165 @@
+SHOPPER DIGITAL TWIN - PROJECT CONTEXT LOG
+==========================================
+Purpose of this file: a running, detailed record of every decision, implementation
+step and result, so anyone (or any new Claude session) can pick up the project cold.
+Newest entries go at the bottom of the LOG section. The SNAPSHOT section is kept current.
+
+------------------------------------------------------------------
+SNAPSHOT (current state)
+------------------------------------------------------------------
+Last updated:      2026-09-25 20:35 UTC
+Phase:             Milestone 1 (synthetic world generator) delivered; Manuga to commit
+Owner:             Manuga
+Language:          Python
+Domain:            General store, Walmart-style (groceries, household, health & beauty,
+                   pet, electronics, clothing, toys, home & garden, books)
+Repository:        https://github.com/ManugaHewa/Shopper-Digital-Twin (Manuga commits and pushes everything)
+Next step:         Manuga commits Milestone 1; then Milestone 2 (baselines + evaluation harness)
+
+Key files (in /mnt/project-files/digital-twin/):
+  plan.md                               Detailed build plan and algorithm design
+  Shopper_Digital_Twin_Overview.pdf     Project overview (problem, solution, method, roadmap)
+  context.txt                           This log
+  milestone-1/GUIDE.md                  Step-by-step instructions for Manuga (copy, run, commit)
+  milestone-1/repo/                     Milestone 1 code, same layout as the repository
+  milestone-1/expected-output/          Charts + summary.json from Claude's run, for comparison
+
+------------------------------------------------------------------
+PROJECT SUMMARY
+------------------------------------------------------------------
+Each simulated customer gets a "twin" learned only from their browsing/purchase logs.
+Twins are run forward in a simulator to predict behaviour under changes (price change,
+new product, stock-out, promotion). Because the data is generated, every shopper's
+true parameters are known (the "answer key"), so what-if forecasts can be scored
+against the true outcome. That validation is the portfolio headline.
+
+------------------------------------------------------------------
+ARCHITECTURE (planned)
+------------------------------------------------------------------
+1. Synthetic world   ~5k products, ~100k shoppers, ~10M events; hidden true params saved separately
+2. Features          product embeddings (co-view/co-buy), shopper histories, prices, context
+3. Twin model        per-shopper multinomial logit choice model:
+                       utility = taste . product_embedding + habit + context
+                                 - price_sensitivity * price + noise
+                     softmax over shown items + an outside "buy nothing" option
+                     hierarchical pooling (shrink sparse shoppers toward similar shoppers)
+                     optional SASRec-style sequence transformer feeding the context term
+                     parameter uncertainty kept for confidence bands
+4. Simulator         per day, vectorised over all twins: arrive (Poisson, seasonal) ->
+                     browse (top ~50 via FAISS) -> choose (softmax sample) -> update state
+5. What-if engine    edit world, re-simulate with SAME random seeds as baseline, diff results
+6. Evaluation        HR@10/NDCG@10, parameter recovery, what-if accuracy vs. answer key,
+                     calibration (Brier), baselines (popularity, MF, single elasticity), speed
+7. Demo              Streamlit: price slider, segment breakdown, "interview a twin" (Claude API,
+                     explanation only - never changes the numbers)
+
+Planned stack: NumPy, pandas/Polars, Parquet, PyTorch, scikit-learn, FAISS, Streamlit,
+Claude API, pytest.
+
+------------------------------------------------------------------
+DECISIONS
+------------------------------------------------------------------
+2026-09-25  Project idea: shopper digital twin (chosen over intent-from-mouse, life-event
+            detector, generative recs, taste map, bandit recommender).
+2026-09-25  Language: Python.
+2026-09-25  Domain: general Walmart-style store. Reason: staples (groceries, household,
+            health, pet) expose repeat-buying cycles and brand loyalty; discretionary
+            categories (clothing, electronics, toys, home) expose taste and willingness to
+            pay; store-brand vs. name-brand pairs expose price sensitivity. One store
+            covers all three behaviours.
+2026-09-25  LLM layer is explanation-only; predictions come from the choice model so they
+            are reproducible and cheap at 100k-shopper scale.
+
+2026-09-25  Workflow: Claude never commits/pushes. Claude writes code into the shared
+            folder with a guide; Manuga reviews, runs, commits and pushes.
+2026-09-25  Behaviour tuning: outside option 1.5 (staples) / 4.0 (browsing) and 50% of
+            unbought due staples lost to a competitor. Gives coffee price elasticity of
+            about -0.35 to -0.5, close to published estimates for staples.
+
+OPEN QUESTIONS
+  - Use Claude API for twin interviews? (default: yes, added late in the roadmap)
+
+------------------------------------------------------------------
+LOG (chronological, newest last)
+------------------------------------------------------------------
+[2026-09-25 19:40 UTC] Planning
+  - Wrote plan.md: 7-part breakdown, full algorithm description, evaluation plan,
+    8 milestones, scale targets, open decisions.
+
+[2026-09-25 19:50 UTC] Domain + documentation
+  - Manuga chose a general Walmart-style store; confirmed it supports both taste and
+    repeat-buying signals (see DECISIONS).
+  - Created Shopper_Digital_Twin_Overview.pdf (6 pages): overview, problem, solution,
+    why a general store, how it works (decision rule, learning, simulation, what-ifs,
+    AI-agent layer), success metrics, technology, roadmap, scale and limits.
+    Generated with Python + reportlab.
+  - Created this context.txt; it will be updated after every implementation step.
+
+[2026-09-25 19:52 UTC] Repository
+  - Manuga created https://github.com/ManugaHewa/Shopper-Digital-Twin
+  - Attaching it failed: Manuga's GitHub account is not linked to Claude yet. Waiting
+    on Manuga to connect GitHub and add the repo in Project settings. The PDF has not
+    been uploaded to the repo yet.
+
+[2026-09-25 19:55 UTC] Repository linked + docs uploaded
+  - Manuga linked GitHub; repo attached and cloned (default branch: main).
+  - Branch docs/project-overview: README.md rewritten with project summary; added
+    docs/Shopper_Digital_Twin_Overview.pdf, docs/plan.md, docs/context.txt.
+  - Opened PR #1: https://github.com/ManugaHewa/Shopper-Digital-Twin/pull/1
+  - Convention: this file (/mnt/project-files/digital-twin/context.txt) is the working
+    copy; docs/context.txt in the repo is synced with each push.
+
+[2026-09-25 19:53 UTC] Workflow change
+  - PR #1 (docs + README) merged by Manuga.
+  - New rule: Claude does NOT push, commit or open PRs. Manuga writes all commits.
+    Claude prepares files in /mnt/project-files/digital-twin/ and gives step-by-step
+    instructions (files to create, commands to run, suggested commit messages).
+  - Claude's local clone of the repo was deleted.
+
+[2026-09-25 20:35 UTC] Milestone 1: synthetic world generator (delivered for Manuga to commit)
+  Package: src/shopper_twin/world/ (installable via pyproject.toml, `pip install -e ".[dev]"`)
+  Files:
+    spec.py        13 departments, 81 categories (47 staples with repurchase cycles, 34
+                   discretionary), seasonality peaks, "requires" (dog/cat/baby/car), 6 hidden
+                   segments with price sensitivity, quality weight, store-brand affinity,
+                   visit rate, household size, pet/baby/car odds, shop hour, dept interest.
+    config.py      WorldConfig (presets tiny/small/full) and Rules (true utility constants).
+    catalog.py     8 brands per dept + store brand "Everyday Value"; products with quality,
+                   16-d style vector, price from brand premium + quality; public rating is a
+                   noisy view of quality. Weekly price schedule: 6%/week regular price changes,
+                   4%/week promotions at 10-30% off.
+    population.py  Shopper traits (lognormal around segment means), taste vectors, favourite
+                   brand per dept, staple usage + personal cycles, discretionary interests,
+                   life events (4%: new_baby or moved_house), public profile (region, age
+                   band, household band, signup date).
+    simulate.py    Day loop, vectorised: visit -> due staples + browsed categories -> view
+                   top-k products (Gumbel top-k on taste/popularity/promo/habit) -> multinomial
+                   logit choice vs. outside option -> update memory. 28-day warm-up not
+                   recorded. Per-day seeds for common random numbers in what-if runs.
+                   Simulator.run(prices=...) accepts an alternative PriceSchedule.
+    generate.py    Saves public/ (products, categories, shoppers, price_history, sessions,
+                   events) and answer_key/ (rules.json, shoppers/products/categories/brands
+                   truth, life_events, arrays.npz with taste_start/taste_end/product_style/
+                   category_center/fav_brand/staple_uses/staple_cycle/disc_weight).
+  Utility (true model):
+    taste_scale*taste.style + qw*2*(quality-0.5) + sb*is_store + loyalty*[fav brand]
+    + habit*[last bought] - beta*log(price/cat_median) + 0.3*promo + Gumbel;
+    outside option 1.5 (due staple) / 4.0 (browsing) + Gumbel.
+  Results, small preset (seed 42, 10k shoppers, 180 days, generated in ~30 s):
+    9,886,629 events (7.70M views, 1.12M carts, 1.07M purchases), 287,087 sessions,
+    1.12 visits/shopper/week, basket 3.72 items / $49.50, grocery 65.7% of purchases,
+    weekend/weekday revenue 1.48x, staple cycle log-correlation 0.997, same-product
+    repeat 36.6%, store-brand share by price-sensitivity quartile 15/34/49/57%,
+    baby purchases 0 before birth -> 1.15/week after.
+  What-if sanity: coffee +40% price -> 11-16% fewer coffee units (2k shoppers, 3 seeds).
+  Tests: 10 passing (determinism, seed changes output, no hidden columns in public data,
+    purchases were viewed, events time-ordered, store brand cheaper, only pet owners buy pet
+    food, staples repeat more, price-sensitive buy more store brand, price rise cuts demand).
+  Lint: ruff clean (line length 120).
+  Issues found and fixed during build:
+    - Day 0 had no due staples (cycle init bug) -> added warm-up period + better init.
+    - Price rises barely changed staple demand (outside option too low, unbought staples
+      just retried later) -> raised outside options, added lost-to-competitor rule.
+  Known limitation: common random numbers are only approximate. Noise draws inside a
+    shopping trip depend on how many trips happen that day, so small what-if effects need
+    large worlds or several seeds.
