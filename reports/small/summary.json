@@ -1,0 +1,36 @@
+{
+  "counts": {
+    "products": 5000,
+    "categories": 81,
+    "shoppers": 10000,
+    "sessions": 287087,
+    "events": 9886629,
+    "events_view": 7698348,
+    "events_cart": 1119356,
+    "events_purchase": 1068925,
+    "life_events": 400
+  },
+  "visits_per_shopper_per_week": 1.12,
+  "avg_basket_items": 3.72,
+  "avg_basket_value": 49.5,
+  "view_to_purchase_rate": 0.139,
+  "grocery_share_of_purchases": 0.657,
+  "weekend_vs_weekday_revenue": 1.48,
+  "staple_cycle_log_correlation": 0.997,
+  "staple_same_product_repeat_rate": 0.366,
+  "discretionary_median_gap_days": 30.5,
+  "store_brand_share_by_quartile": [
+    15.1,
+    34.4,
+    48.8,
+    56.6
+  ],
+  "promo_share_by_quartile": [
+    10.6,
+    11.9,
+    12.8,
+    14.2
+  ],
+  "baby_purchases_per_week_before": 0.0,
+  "baby_purchases_per_week_after": 1.151
+}
