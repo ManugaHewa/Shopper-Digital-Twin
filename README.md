@@ -21,7 +21,6 @@ Because the store and its shoppers are generated, every shopper's true tastes an
 
 - [Project overview (PDF)](docs/Shopper_Digital_Twin_Overview.pdf)
 - [Build plan and algorithm design](docs/plan.md)
-- [Context log](docs/context.txt): detailed running record of decisions and implementation steps
 
 ## Status
 
