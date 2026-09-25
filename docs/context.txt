@@ -13,7 +13,7 @@ Owner:             Manuga
 Language:          Python
 Domain:            General store, Walmart-style (groceries, household, health & beauty,
                    pet, electronics, clothing, toys, home & garden, books)
-Repository:        https://github.com/ManugaHewa/Shopper-Digital-Twin (not yet linked to Claude)
+Repository:        https://github.com/ManugaHewa/Shopper-Digital-Twin (linked; docs in PR #1)
 Next step:         Connect the GitHub repo, then Milestone 1 (synthetic world generator)
 
 Key files (in /mnt/project-files/digital-twin/):
@@ -92,3 +92,11 @@ LOG (chronological, newest last)
   - Attaching it failed: Manuga's GitHub account is not linked to Claude yet. Waiting
     on Manuga to connect GitHub and add the repo in Project settings. The PDF has not
     been uploaded to the repo yet.
+
+[2026-09-25 19:55 UTC] Repository linked + docs uploaded
+  - Manuga linked GitHub; repo attached and cloned (default branch: main).
+  - Branch docs/project-overview: README.md rewritten with project summary; added
+    docs/Shopper_Digital_Twin_Overview.pdf, docs/plan.md, docs/context.txt.
+  - Opened PR #1: https://github.com/ManugaHewa/Shopper-Digital-Twin/pull/1
+  - Convention: this file (/mnt/project-files/digital-twin/context.txt) is the working
+    copy; docs/context.txt in the repo is synced with each push.
