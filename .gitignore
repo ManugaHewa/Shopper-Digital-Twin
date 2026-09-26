@@ -1,5 +1,6 @@
 # generated data (recreate with scripts/generate_world.py)
 data/
+models/
 
 # Python
 __pycache__/
