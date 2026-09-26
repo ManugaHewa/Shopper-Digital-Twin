@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shopper-twin"
-version = "0.4.0"
+version = "0.5.0"
 description = "Shopper digital twins: predict what each customer would buy under price and product changes"
 requires-python = ">=3.10"
 dependencies = [

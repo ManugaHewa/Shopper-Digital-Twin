@@ -70,8 +70,9 @@ class WhatIf:
         return pd.DataFrame(rows)
 
     # ---- one scenario
-    def run(self, scenario: Scenario, n_boot: int = 200, seed: int = 0) -> dict:
-        """Everything the report shows about one scenario, as plain numbers (plus a per-product table)."""
+    def run(self, scenario: Scenario, n_boot: int = 200, seed: int = 0, shopper_detail: bool = False) -> dict:
+        """Everything the report shows about one scenario, as plain numbers (plus a per-product table).
+        `shopper_detail` also returns each shopper's expected units and revenue (used by the evaluation)."""
         cat = self.twin.cat
         window = (int(self.weeks.min()), int(self.weeks.max()))
         plan = scenario.apply(self.base_plan, self.products, window)
@@ -110,7 +111,7 @@ class WhatIf:
         prices_changed = any(isinstance(ch, (PriceChange, Promotion)) for ch in scenario.changes)
         # for a stock-out the changed products always lose everything, so segments show the category instead
         segment_on = "category" if all(isinstance(ch, StockOut) for ch in scenario.changes) else "target"
-        return {
+        out = {
             "name": scenario.name,
             "description": scenario.describe(),
             "weeks": [int(in_window.min()), int(in_window.max())] if len(in_window) else None,
@@ -136,13 +137,17 @@ class WhatIf:
             "by_segment": self._segments(per_shopper, "c" if segment_on == "category" else "t"),
             "products": products,  # full table (not saved to JSON)
         }
+        if shopper_detail:
+            out["per_shopper"] = {"users": self.users, **per_shopper}  # arrays (not saved to JSON)
+        return out
 
     def _segments(self, per_shopper: dict, key: str) -> dict:
         """% change in units (key "t": the changed products, "c": their categories) by household size and by
         learned price sensitivity."""
         sh = self.shoppers.iloc[self.users]
         traits = self.twin.shopper_traits().iloc[self.users]
-        quartile = pd.qcut(traits.price_sens.to_numpy(), 4, labels=SENSITIVITY_ORDER)
+        # ranked first, so equal values (e.g. a twin without personal traits) still split into quarters
+        quartile = pd.qcut(traits.price_sens.rank(method="first").to_numpy(), 4, labels=SENSITIVITY_ORDER)
         out = {}
         for name, labels, order in (("household size", sh.household_band.astype(str).to_numpy(), HOUSEHOLD_ORDER),
                                     ("price sensitivity (learned)", np.asarray(quartile).astype(str),

@@ -162,17 +162,23 @@ def _batch_loglik(model: ChoiceModel, data: TripTensors, idx: torch.Tensor, memb
 def fit_choice_model(trips: Trips, cat: Catalogue, groups: np.ndarray, n_shoppers: int, dim: int = 16,
                      epochs: int = 6, batch_size: int = 4096, lr: float = 0.03, view_weight: float = 1.0,
                      taste_reg: float = 1.0, trait_reg: float = 2.0, emb_reg: float = 0.1,
-                     trip_weights: np.ndarray | None = None, seed: int = 0, verbose: bool = False) -> ChoiceModel:
-    """Maximum a-posteriori fit with Adam on minibatches of trips (trips with weight 0 are left out)."""
+                     trip_weights: np.ndarray | None = None, seed: int = 0, personal: bool = True,
+                     verbose: bool = False) -> ChoiceModel:
+    """Maximum a-posteriori fit with Adam on minibatches of trips (trips with weight 0 are left out).
+    `personal=False` fits group values only: every shopper's own deviations stay at zero."""
     torch.manual_seed(seed)
     data = TripTensors(trips, cat)
     if trip_weights is not None:
         data.weight = torch.as_tensor(trip_weights, dtype=torch.float32)
     model = ChoiceModel(n_shoppers, cat.n_products, cat.n_categories, groups, dim=dim, seed=seed)
+    if not personal:
+        for p in (model.taste_dev, model.trait_dev):
+            p.data.zero_()
+            p.requires_grad_(False)
     members = torch.as_tensor(cat.members)
     promo_all = torch.as_tensor(cat.promo)
     sizes = (cat.members >= 0).sum(axis=1)
-    opt = torch.optim.Adam(model.parameters(), lr=lr)
+    opt = torch.optim.Adam([p for p in model.parameters() if p.requires_grad], lr=lr)
     total_weight = float(data.weight.sum())
     keep = data.weight.numpy() > 0
     rng = np.random.default_rng(seed)

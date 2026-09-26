@@ -9,6 +9,7 @@ Stages (each is one of the scripts in this folder, run in its own process):
   baselines  tune and score the baseline recommenders     reports/small/baselines.json
   twin       fit and score the shopper twin               reports/small/twin.json and models/small/twin_day*.pt
   whatif     ask the twin five what-if questions          reports/small/whatif.json
+  evaluate   score the twin against the true store         reports/small/evaluation.json
 A stage counts as done when all its outputs exist. The reports come with the repository but the world and the
 fitted twin do not, so on a fresh copy the world and twin stages run. --force redoes the selected stages anyway.
 """
@@ -31,6 +32,8 @@ STAGES = [
     ("twin", ["scripts/run_twin.py", "--world", str(WORLD)],
      lambda: (REPORTS / "twin.json").exists() and any(MODELS.glob("twin_day*.pt"))),
     ("whatif", ["scripts/run_whatif.py", "--world", str(WORLD)], lambda: (REPORTS / "whatif.json").exists()),
+    ("evaluate", ["scripts/evaluate_twin.py", "--world", str(WORLD)],
+     lambda: (REPORTS / "evaluation.json").exists()),
 ]
 
 
