@@ -4,13 +4,14 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "shopper-twin"
-version = "0.1.0"
+version = "0.2.0"
 description = "Shopper digital twins: predict what each customer would buy under price and product changes"
 requires-python = ">=3.10"
 dependencies = [
     "numpy>=1.26",
     "pandas>=2.1",
     "pyarrow>=14",
+    "scipy>=1.11",
     "matplotlib>=3.8",
 ]
 
