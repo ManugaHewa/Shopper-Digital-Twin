@@ -1,0 +1,1197 @@
+{
+  "world": "small",
+  "twin": "models/small/twin_day152.pt",
+  "window": {
+    "first_day": 152,
+    "last_day": 179,
+    "weeks": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ]
+  },
+  "volume_check": {
+    "total": {
+      "twin": 229478.08865357126,
+      "actual": 232862.0,
+      "last_4_weeks": 235613.0
+    },
+    "wape": {
+      "twin": 0.03604310651212567,
+      "last_4_weeks": 0.024284769520144977
+    },
+    "correlation": {
+      "twin": 0.9959298238626041,
+      "last_4_weeks": 0.9957056619134479
+    },
+    "categories": [
+      {
+        "category": "Milk",
+        "department": "Grocery",
+        "twin": 8382.49,
+        "actual": 8531.0,
+        "last_4_weeks": 8767.0,
+        "twin_error_pct": -1.74
+      },
+      {
+        "category": "Eggs",
+        "department": "Grocery",
+        "twin": 7313.43,
+        "actual": 7352.0,
+        "last_4_weeks": 7493.0,
+        "twin_error_pct": -0.52
+      },
+      {
+        "category": "Cheese",
+        "department": "Grocery",
+        "twin": 5926.09,
+        "actual": 6012.0,
+        "last_4_weeks": 6237.0,
+        "twin_error_pct": -1.43
+      },
+      {
+        "category": "Yogurt",
+        "department": "Grocery",
+        "twin": 8323.2,
+        "actual": 8481.0,
+        "last_4_weeks": 8771.0,
+        "twin_error_pct": -1.86
+      },
+      {
+        "category": "Fresh Fruit",
+        "department": "Grocery",
+        "twin": 9019.27,
+        "actual": 9237.0,
+        "last_4_weeks": 9266.0,
+        "twin_error_pct": -2.36
+      },
+      {
+        "category": "Fresh Vegetables",
+        "department": "Grocery",
+        "twin": 9273.02,
+        "actual": 9465.0,
+        "last_4_weeks": 9564.0,
+        "twin_error_pct": -2.03
+      },
+      {
+        "category": "Bread",
+        "department": "Grocery",
+        "twin": 8972.94,
+        "actual": 9373.0,
+        "last_4_weeks": 9407.0,
+        "twin_error_pct": -4.27
+      },
+      {
+        "category": "Pasta & Rice",
+        "department": "Grocery",
+        "twin": 4190.61,
+        "actual": 4367.0,
+        "last_4_weeks": 4306.0,
+        "twin_error_pct": -4.04
+      },
+      {
+        "category": "Canned Goods",
+        "department": "Grocery",
+        "twin": 4262.99,
+        "actual": 4442.0,
+        "last_4_weeks": 4426.0,
+        "twin_error_pct": -4.03
+      },
+      {
+        "category": "Breakfast Cereal",
+        "department": "Grocery",
+        "twin": 6027.57,
+        "actual": 5942.0,
+        "last_4_weeks": 6128.0,
+        "twin_error_pct": 1.44
+      },
+      {
+        "category": "Coffee",
+        "department": "Grocery",
+        "twin": 4308.38,
+        "actual": 4477.0,
+        "last_4_weeks": 4612.0,
+        "twin_error_pct": -3.77
+      },
+      {
+        "category": "Tea",
+        "department": "Grocery",
+        "twin": 3388.86,
+        "actual": 3561.0,
+        "last_4_weeks": 3506.0,
+        "twin_error_pct": -4.83
+      },
+      {
+        "category": "Condiments & Sauces",
+        "department": "Grocery",
+        "twin": 3173.69,
+        "actual": 3360.0,
+        "last_4_weeks": 3397.0,
+        "twin_error_pct": -5.54
+      },
+      {
+        "category": "Baking Supplies",
+        "department": "Grocery",
+        "twin": 2554.29,
+        "actual": 2622.0,
+        "last_4_weeks": 2592.0,
+        "twin_error_pct": -2.58
+      },
+      {
+        "category": "Chips & Snacks",
+        "department": "Grocery",
+        "twin": 6813.09,
+        "actual": 7051.0,
+        "last_4_weeks": 7016.0,
+        "twin_error_pct": -3.37
+      },
+      {
+        "category": "Cookies & Candy",
+        "department": "Grocery",
+        "twin": 6456.64,
+        "actual": 6596.0,
+        "last_4_weeks": 6899.0,
+        "twin_error_pct": -2.11
+      },
+      {
+        "category": "Soft Drinks",
+        "department": "Grocery",
+        "twin": 8440.52,
+        "actual": 8498.0,
+        "last_4_weeks": 8852.0,
+        "twin_error_pct": -0.68
+      },
+      {
+        "category": "Juice",
+        "department": "Grocery",
+        "twin": 7133.39,
+        "actual": 7457.0,
+        "last_4_weeks": 7331.0,
+        "twin_error_pct": -4.34
+      },
+      {
+        "category": "Bottled Water",
+        "department": "Grocery",
+        "twin": 7077.3,
+        "actual": 7131.0,
+        "last_4_weeks": 7240.0,
+        "twin_error_pct": -0.75
+      },
+      {
+        "category": "Frozen Meals",
+        "department": "Grocery",
+        "twin": 7027.34,
+        "actual": 7232.0,
+        "last_4_weeks": 7335.0,
+        "twin_error_pct": -2.83
+      },
+      {
+        "category": "Ice Cream",
+        "department": "Grocery",
+        "twin": 5907.28,
+        "actual": 6060.0,
+        "last_4_weeks": 6075.0,
+        "twin_error_pct": -2.52
+      },
+      {
+        "category": "Frozen Vegetables",
+        "department": "Grocery",
+        "twin": 5751.27,
+        "actual": 5940.0,
+        "last_4_weeks": 5860.0,
+        "twin_error_pct": -3.18
+      },
+      {
+        "category": "Fresh Meat",
+        "department": "Grocery",
+        "twin": 7939.09,
+        "actual": 8145.0,
+        "last_4_weeks": 8309.0,
+        "twin_error_pct": -2.53
+      },
+      {
+        "category": "Seafood",
+        "department": "Grocery",
+        "twin": 5649.81,
+        "actual": 5777.0,
+        "last_4_weeks": 5838.0,
+        "twin_error_pct": -2.2
+      },
+      {
+        "category": "Laundry Detergent",
+        "department": "Household",
+        "twin": 3168.23,
+        "actual": 3321.0,
+        "last_4_weeks": 3279.0,
+        "twin_error_pct": -4.6
+      },
+      {
+        "category": "Dish Soap",
+        "department": "Household",
+        "twin": 3169.87,
+        "actual": 3282.0,
+        "last_4_weeks": 3342.0,
+        "twin_error_pct": -3.42
+      },
+      {
+        "category": "Paper Towels",
+        "department": "Household",
+        "twin": 4157.1,
+        "actual": 4324.0,
+        "last_4_weeks": 4308.0,
+        "twin_error_pct": -3.86
+      },
+      {
+        "category": "Toilet Paper",
+        "department": "Household",
+        "twin": 4168.33,
+        "actual": 4326.0,
+        "last_4_weeks": 4320.0,
+        "twin_error_pct": -3.64
+      },
+      {
+        "category": "Trash Bags",
+        "department": "Household",
+        "twin": 2390.58,
+        "actual": 2476.0,
+        "last_4_weeks": 2474.0,
+        "twin_error_pct": -3.45
+      },
+      {
+        "category": "Cleaning Supplies",
+        "department": "Household",
+        "twin": 2358.4,
+        "actual": 2385.0,
+        "last_4_weeks": 2405.0,
+        "twin_error_pct": -1.12
+      },
+      {
+        "category": "Shampoo",
+        "department": "Health & Beauty",
+        "twin": 2517.51,
+        "actual": 2616.0,
+        "last_4_weeks": 2502.0,
+        "twin_error_pct": -3.76
+      },
+      {
+        "category": "Toothpaste",
+        "department": "Health & Beauty",
+        "twin": 2700.63,
+        "actual": 2754.0,
+        "last_4_weeks": 2742.0,
+        "twin_error_pct": -1.94
+      },
+      {
+        "category": "Body Wash",
+        "department": "Health & Beauty",
+        "twin": 2591.67,
+        "actual": 2710.0,
+        "last_4_weeks": 2711.0,
+        "twin_error_pct": -4.37
+      },
+      {
+        "category": "Vitamins",
+        "department": "Health & Beauty",
+        "twin": 1892.43,
+        "actual": 1964.0,
+        "last_4_weeks": 1932.0,
+        "twin_error_pct": -3.64
+      },
+      {
+        "category": "Pain Relief",
+        "department": "Health & Beauty",
+        "twin": 1253.25,
+        "actual": 1434.0,
+        "last_4_weeks": 1381.0,
+        "twin_error_pct": -12.6
+      },
+      {
+        "category": "Skincare",
+        "department": "Health & Beauty",
+        "twin": 2184.03,
+        "actual": 1888.0,
+        "last_4_weeks": 1980.0,
+        "twin_error_pct": 15.68
+      },
+      {
+        "category": "Razors",
+        "department": "Health & Beauty",
+        "twin": 2179.15,
+        "actual": 1947.0,
+        "last_4_weeks": 1997.0,
+        "twin_error_pct": 11.92
+      },
+      {
+        "category": "Cosmetics",
+        "department": "Health & Beauty",
+        "twin": 716.8,
+        "actual": 663.0,
+        "last_4_weeks": 670.0,
+        "twin_error_pct": 8.11
+      },
+      {
+        "category": "Diapers",
+        "department": "Baby",
+        "twin": 3505.17,
+        "actual": 3430.0,
+        "last_4_weeks": 3569.0,
+        "twin_error_pct": 2.19
+      },
+      {
+        "category": "Baby Formula",
+        "department": "Baby",
+        "twin": 3482.38,
+        "actual": 3579.0,
+        "last_4_weeks": 3547.0,
+        "twin_error_pct": -2.7
+      },
+      {
+        "category": "Baby Food",
+        "department": "Baby",
+        "twin": 4171.72,
+        "actual": 4140.0,
+        "last_4_weeks": 4111.0,
+        "twin_error_pct": 0.77
+      },
+      {
+        "category": "Baby Gear",
+        "department": "Baby",
+        "twin": 179.18,
+        "actual": 177.0,
+        "last_4_weeks": 208.0,
+        "twin_error_pct": 1.23
+      },
+      {
+        "category": "Dog Food",
+        "department": "Pet",
+        "twin": 2476.75,
+        "actual": 2544.0,
+        "last_4_weeks": 2510.0,
+        "twin_error_pct": -2.64
+      },
+      {
+        "category": "Cat Food",
+        "department": "Pet",
+        "twin": 2393.05,
+        "actual": 2445.0,
+        "last_4_weeks": 2503.0,
+        "twin_error_pct": -2.12
+      },
+      {
+        "category": "Cat Litter",
+        "department": "Pet",
+        "twin": 1939.22,
+        "actual": 1911.0,
+        "last_4_weeks": 1859.0,
+        "twin_error_pct": 1.48
+      },
+      {
+        "category": "Pet Toys",
+        "department": "Pet",
+        "twin": 519.27,
+        "actual": 539.0,
+        "last_4_weeks": 533.0,
+        "twin_error_pct": -3.66
+      },
+      {
+        "category": "Headphones",
+        "department": "Electronics",
+        "twin": 435.68,
+        "actual": 413.0,
+        "last_4_weeks": 373.0,
+        "twin_error_pct": 5.49
+      },
+      {
+        "category": "Phone Accessories",
+        "department": "Electronics",
+        "twin": 560.01,
+        "actual": 440.0,
+        "last_4_weeks": 461.0,
+        "twin_error_pct": 27.27
+      },
+      {
+        "category": "TVs",
+        "department": "Electronics",
+        "twin": 387.53,
+        "actual": 322.0,
+        "last_4_weeks": 394.0,
+        "twin_error_pct": 20.35
+      },
+      {
+        "category": "Laptops",
+        "department": "Electronics",
+        "twin": 588.15,
+        "actual": 518.0,
+        "last_4_weeks": 446.0,
+        "twin_error_pct": 13.54
+      },
+      {
+        "category": "Video Games",
+        "department": "Electronics",
+        "twin": 220.6,
+        "actual": 187.0,
+        "last_4_weeks": 235.0,
+        "twin_error_pct": 17.97
+      },
+      {
+        "category": "Smart Home",
+        "department": "Electronics",
+        "twin": 422.93,
+        "actual": 368.0,
+        "last_4_weeks": 371.0,
+        "twin_error_pct": 14.93
+      },
+      {
+        "category": "Batteries",
+        "department": "Electronics",
+        "twin": 1058.13,
+        "actual": 1077.0,
+        "last_4_weeks": 1207.0,
+        "twin_error_pct": -1.75
+      },
+      {
+        "category": "Men's Clothing",
+        "department": "Clothing",
+        "twin": 637.0,
+        "actual": 488.0,
+        "last_4_weeks": 546.0,
+        "twin_error_pct": 30.53
+      },
+      {
+        "category": "Women's Clothing",
+        "department": "Clothing",
+        "twin": 555.53,
+        "actual": 510.0,
+        "last_4_weeks": 499.0,
+        "twin_error_pct": 8.93
+      },
+      {
+        "category": "Kids' Clothing",
+        "department": "Clothing",
+        "twin": 690.61,
+        "actual": 650.0,
+        "last_4_weeks": 560.0,
+        "twin_error_pct": 6.25
+      },
+      {
+        "category": "Shoes",
+        "department": "Clothing",
+        "twin": 602.68,
+        "actual": 511.0,
+        "last_4_weeks": 532.0,
+        "twin_error_pct": 17.94
+      },
+      {
+        "category": "Socks & Underwear",
+        "department": "Clothing",
+        "twin": 972.67,
+        "actual": 933.0,
+        "last_4_weeks": 1021.0,
+        "twin_error_pct": 4.25
+      },
+      {
+        "category": "Outerwear",
+        "department": "Clothing",
+        "twin": 154.36,
+        "actual": 143.0,
+        "last_4_weeks": 133.0,
+        "twin_error_pct": 7.95
+      },
+      {
+        "category": "Action Figures",
+        "department": "Toys",
+        "twin": 41.88,
+        "actual": 41.0,
+        "last_4_weeks": 81.0,
+        "twin_error_pct": 2.15
+      },
+      {
+        "category": "Board Games",
+        "department": "Toys",
+        "twin": 110.2,
+        "actual": 105.0,
+        "last_4_weeks": 168.0,
+        "twin_error_pct": 4.95
+      },
+      {
+        "category": "Building Sets",
+        "department": "Toys",
+        "twin": 43.95,
+        "actual": 69.0,
+        "last_4_weeks": 103.0,
+        "twin_error_pct": -36.31
+      },
+      {
+        "category": "Dolls",
+        "department": "Toys",
+        "twin": 105.54,
+        "actual": 133.0,
+        "last_4_weeks": 172.0,
+        "twin_error_pct": -20.65
+      },
+      {
+        "category": "Outdoor Toys",
+        "department": "Toys",
+        "twin": 572.87,
+        "actual": 718.0,
+        "last_4_weeks": 621.0,
+        "twin_error_pct": -20.21
+      },
+      {
+        "category": "Bedding",
+        "department": "Home & Garden",
+        "twin": 679.33,
+        "actual": 542.0,
+        "last_4_weeks": 553.0,
+        "twin_error_pct": 25.34
+      },
+      {
+        "category": "Kitchenware",
+        "department": "Home & Garden",
+        "twin": 684.19,
+        "actual": 631.0,
+        "last_4_weeks": 609.0,
+        "twin_error_pct": 8.43
+      },
+      {
+        "category": "Home Decor",
+        "department": "Home & Garden",
+        "twin": 647.31,
+        "actual": 563.0,
+        "last_4_weeks": 595.0,
+        "twin_error_pct": 14.98
+      },
+      {
+        "category": "Furniture",
+        "department": "Home & Garden",
+        "twin": 672.64,
+        "actual": 636.0,
+        "last_4_weeks": 643.0,
+        "twin_error_pct": 5.76
+      },
+      {
+        "category": "Storage",
+        "department": "Home & Garden",
+        "twin": 610.74,
+        "actual": 586.0,
+        "last_4_weeks": 603.0,
+        "twin_error_pct": 4.22
+      },
+      {
+        "category": "Garden Supplies",
+        "department": "Home & Garden",
+        "twin": 852.09,
+        "actual": 857.0,
+        "last_4_weeks": 924.0,
+        "twin_error_pct": -0.57
+      },
+      {
+        "category": "Grills & Outdoor",
+        "department": "Home & Garden",
+        "twin": 981.97,
+        "actual": 917.0,
+        "last_4_weeks": 998.0,
+        "twin_error_pct": 7.09
+      },
+      {
+        "category": "Fitness Equipment",
+        "department": "Sports & Outdoors",
+        "twin": 343.21,
+        "actual": 214.0,
+        "last_4_weeks": 364.0,
+        "twin_error_pct": 60.38
+      },
+      {
+        "category": "Camping",
+        "department": "Sports & Outdoors",
+        "twin": 881.96,
+        "actual": 864.0,
+        "last_4_weeks": 843.0,
+        "twin_error_pct": 2.08
+      },
+      {
+        "category": "Bikes",
+        "department": "Sports & Outdoors",
+        "twin": 774.83,
+        "actual": 674.0,
+        "last_4_weeks": 796.0,
+        "twin_error_pct": 14.96
+      },
+      {
+        "category": "Sports Balls",
+        "department": "Sports & Outdoors",
+        "twin": 650.53,
+        "actual": 524.0,
+        "last_4_weeks": 544.0,
+        "twin_error_pct": 24.15
+      },
+      {
+        "category": "Motor Oil",
+        "department": "Automotive",
+        "twin": 1869.18,
+        "actual": 1944.0,
+        "last_4_weeks": 2026.0,
+        "twin_error_pct": -3.85
+      },
+      {
+        "category": "Car Accessories",
+        "department": "Automotive",
+        "twin": 491.27,
+        "actual": 470.0,
+        "last_4_weeks": 488.0,
+        "twin_error_pct": 4.52
+      },
+      {
+        "category": "Books",
+        "department": "Books & Media",
+        "twin": 588.06,
+        "actual": 580.0,
+        "last_4_weeks": 559.0,
+        "twin_error_pct": 1.39
+      },
+      {
+        "category": "Movies & Music",
+        "department": "Books & Media",
+        "twin": 555.69,
+        "actual": 522.0,
+        "last_4_weeks": 509.0,
+        "twin_error_pct": 6.45
+      },
+      {
+        "category": "School Supplies",
+        "department": "Office & School",
+        "twin": 624.3,
+        "actual": 875.0,
+        "last_4_weeks": 676.0,
+        "twin_error_pct": -28.65
+      },
+      {
+        "category": "Office Supplies",
+        "department": "Office & School",
+        "twin": 1983.16,
+        "actual": 1873.0,
+        "last_4_weeks": 1850.0,
+        "twin_error_pct": 5.88
+      }
+    ]
+  },
+  "scenarios": [
+    {
+      "name": "Coffee +20%",
+      "description": "Coffee price +20%",
+      "weeks": [
+        21,
+        25
+      ],
+      "n_target_products": 81,
+      "categories": [
+        "Coffee"
+      ],
+      "price_change_pct": 19.999999999999993,
+      "target_units": {
+        "base": 4308.378287071669,
+        "new": 4047.2313269151305,
+        "pct": -6.061374901553396,
+        "band_pct": [
+          -6.177230780681827,
+          -5.939426691792525
+        ]
+      },
+      "category_units": {
+        "base": 4308.378287071669,
+        "new": 4047.2313269151305,
+        "pct": -6.061374901553396,
+        "band_pct": [
+          -6.177230780681827,
+          -5.939426691792557
+        ]
+      },
+      "category_revenue": {
+        "base": 28430.077978925223,
+        "new": 31946.148499205512,
+        "pct": 12.367431854695221,
+        "band_pct": [
+          12.233946923975695,
+          12.51479092390528
+        ]
+      },
+      "target_buyers": {
+        "base": 1967.6497251773392,
+        "new": 1885.1826086819885
+      },
+      "substitution": {
+        "target_change": -261.14696015653817,
+        "other_products_change": 0.0,
+        "category_change": -261.14696015653817,
+        "most_affected_other_products": []
+      },
+      "segments_measure": "target",
+      "by_segment": {
+        "household size": {
+          "1": -6.629120471055272,
+          "2": -6.164888476220376,
+          "3-4": -5.85051278540103,
+          "5+": -5.899539618003702
+        },
+        "price sensitivity (learned)": {
+          "lowest": -4.164063794308315,
+          "low": -6.649616087358046,
+          "high": -6.961265325412014,
+          "highest": -6.153774051839001
+        }
+      },
+      "seconds": 2.3
+    },
+    {
+      "name": "Store-brand milk -15%",
+      "description": "store-brand Milk price -15%",
+      "weeks": [
+        21,
+        25
+      ],
+      "n_target_products": 17,
+      "categories": [
+        "Milk"
+      ],
+      "price_change_pct": -15.000000000000002,
+      "target_units": {
+        "base": 2957.2391003697894,
+        "new": 3328.511692339572,
+        "pct": 12.554703200135453,
+        "band_pct": [
+          12.31246363921495,
+          12.806348688277186
+        ]
+      },
+      "category_units": {
+        "base": 8382.493454056312,
+        "new": 8504.797886849723,
+        "pct": 1.4590459684072687,
+        "band_pct": [
+          1.4209286625781947,
+          1.5002688583683588
+        ]
+      },
+      "category_revenue": {
+        "base": 24636.35471270753,
+        "new": 23564.093644037144,
+        "pct": -4.352352777731793,
+        "band_pct": [
+          -4.4753650619119645,
+          -4.2176730375061116
+        ]
+      },
+      "target_buyers": {
+        "base": 1282.8640297765373,
+        "new": 1400.3043963842924
+      },
+      "substitution": {
+        "target_change": 371.27259196978275,
+        "other_products_change": -248.9681591763769,
+        "category_change": 122.30443279341125,
+        "most_affected_other_products": [
+          {
+            "name": "Pinebrook Milk Pro",
+            "brand": "Pinebrook",
+            "change": -20.026626061138586
+          },
+          {
+            "name": "Riverridge Milk Original",
+            "brand": "Riverridge",
+            "change": -18.19609625044086
+          },
+          {
+            "name": "Goldencrest Milk Essentials",
+            "brand": "Goldencrest",
+            "change": -14.234792438156774
+          },
+          {
+            "name": "Riverridge Milk Pro",
+            "brand": "Riverridge",
+            "change": -13.607793262810901
+          },
+          {
+            "name": "Rivermark Milk Deluxe",
+            "brand": "Rivermark",
+            "change": -11.37485021312034
+          }
+        ]
+      },
+      "segments_measure": "target",
+      "by_segment": {
+        "household size": {
+          "1": 12.933087148665345,
+          "2": 12.550336696712217,
+          "3-4": 12.3985373201279,
+          "5+": 12.549688767227085
+        },
+        "price sensitivity (learned)": {
+          "lowest": 8.896650221143965,
+          "low": 11.556583350454176,
+          "high": 12.177130701966089,
+          "highest": 13.536190566596783
+        }
+      },
+      "seconds": 2.1
+    },
+    {
+      "name": "Best-selling cereal out of stock (Riverridge Breakfast Cereal Pro)",
+      "description": "product 602 out of stock",
+      "weeks": [
+        21,
+        25
+      ],
+      "n_target_products": 1,
+      "categories": [
+        "Breakfast Cereal"
+      ],
+      "price_change_pct": null,
+      "target_units": {
+        "base": 406.64499670080625,
+        "new": 0.0,
+        "pct": -100.0,
+        "band_pct": [
+          -100.0,
+          -100.0
+        ]
+      },
+      "category_units": {
+        "base": 6027.571327277765,
+        "new": 5983.2753418904185,
+        "pct": -0.7348894435622033,
+        "band_pct": [
+          -0.8041648835482046,
+          -0.65561674710717
+        ]
+      },
+      "category_revenue": {
+        "base": 19448.57096184953,
+        "new": 19599.437421822106,
+        "pct": 0.7757200272889619,
+        "band_pct": [
+          0.7140691736788496,
+          0.8665478699341467
+        ]
+      },
+      "target_buyers": {
+        "base": 221.72917171202135,
+        "new": 0.0
+      },
+      "substitution": {
+        "target_change": -406.64499670080625,
+        "other_products_change": 362.34901131345816,
+        "category_change": -44.29598538734626,
+        "most_affected_other_products": [
+          {
+            "name": "Everyday Value Breakfast Cereal Classic",
+            "brand": "Everyday Value",
+            "change": 23.769649312854426
+          },
+          {
+            "name": "Everyday Value Breakfast Cereal Mini",
+            "brand": "Everyday Value",
+            "change": 15.414406368748672
+          },
+          {
+            "name": "Aspenwell Breakfast Cereal Fresh",
+            "brand": "Aspenwell",
+            "change": 15.260455542435324
+          },
+          {
+            "name": "Riverridge Breakfast Cereal Premium",
+            "brand": "Riverridge",
+            "change": 13.955994924549259
+          },
+          {
+            "name": "Riverridge Breakfast Cereal Ultra",
+            "brand": "Riverridge",
+            "change": 13.353046601677363
+          }
+        ]
+      },
+      "segments_measure": "category",
+      "by_segment": {
+        "household size": {
+          "1": -0.5665232344157056,
+          "2": -0.9072326999923885,
+          "3-4": -0.6919193123900214,
+          "5+": -0.7632915605756407
+        },
+        "price sensitivity (learned)": {
+          "lowest": -0.5297195744427774,
+          "low": -0.8778137696917376,
+          "high": -0.8876017375162526,
+          "highest": -0.6692661893443086
+        }
+      },
+      "seconds": 2.3
+    },
+    {
+      "name": "25% off Rivermark snacks",
+      "description": "Rivermark Chips & Snacks on promotion at 25% off",
+      "weeks": [
+        21,
+        25
+      ],
+      "n_target_products": 13,
+      "categories": [
+        "Chips & Snacks"
+      ],
+      "price_change_pct": -23.305860736849578,
+      "target_units": {
+        "base": 1117.8127236985483,
+        "new": 3055.5916054801346,
+        "pct": 173.35452001029168,
+        "band_pct": [
+          170.19617637238662,
+          177.0215512136594
+        ]
+      },
+      "category_units": {
+        "base": 6813.085384050423,
+        "new": 7259.602982589025,
+        "pct": 6.553823611016352,
+        "band_pct": [
+          6.405178463456754,
+          6.733897892278888
+        ]
+      },
+      "category_revenue": {
+        "base": 20865.375707514104,
+        "new": 21398.35045724902,
+        "pct": 2.5543501214932762,
+        "band_pct": [
+          2.427878525140066,
+          2.7198583040952196
+        ]
+      },
+      "target_buyers": {
+        "base": 661.1781525409949,
+        "new": 1542.7051479332797
+      },
+      "substitution": {
+        "target_change": 1937.7788817815863,
+        "other_products_change": -1491.2612832429859,
+        "category_change": 446.5175985386013,
+        "most_affected_other_products": [
+          {
+            "name": "Aspenwell Chips & Snacks Plus",
+            "brand": "Aspenwell",
+            "change": -74.84389298724571
+          },
+          {
+            "name": "Everyday Value Chips & Snacks Plus",
+            "brand": "Everyday Value",
+            "change": -70.98022112852169
+          },
+          {
+            "name": "Riverridge Chips & Snacks Original",
+            "brand": "Riverridge",
+            "change": -63.06232976817944
+          },
+          {
+            "name": "Pinebrook Chips & Snacks Premium",
+            "brand": "Pinebrook",
+            "change": -61.22595705387516
+          },
+          {
+            "name": "Everyday Value Chips & Snacks Plus",
+            "brand": "Everyday Value",
+            "change": -56.48649713433497
+          }
+        ]
+      },
+      "segments_measure": "target",
+      "by_segment": {
+        "household size": {
+          "1": 162.23326062263666,
+          "2": 155.76513123905906,
+          "3-4": 169.53691484150232,
+          "5+": 210.35176941459054
+        },
+        "price sensitivity (learned)": {
+          "lowest": 105.46619364052927,
+          "low": 162.7126884870187,
+          "high": 202.77996303982516,
+          "highest": 269.6033867773412
+        }
+      },
+      "seconds": 2.4
+    },
+    {
+      "name": "All store-brand products +10%",
+      "description": "store-brand price +10%",
+      "weeks": [
+        21,
+        25
+      ],
+      "n_target_products": 1087,
+      "categories": [
+        "Milk",
+        "Eggs",
+        "Cheese",
+        "Yogurt",
+        "Fresh Fruit",
+        "Fresh Vegetables",
+        "Bread",
+        "Pasta & Rice",
+        "Canned Goods",
+        "Breakfast Cereal",
+        "Coffee",
+        "Tea",
+        "Condiments & Sauces",
+        "Baking Supplies",
+        "Chips & Snacks",
+        "Cookies & Candy",
+        "Soft Drinks",
+        "Juice",
+        "Bottled Water",
+        "Frozen Meals",
+        "Ice Cream",
+        "Frozen Vegetables",
+        "Fresh Meat",
+        "Seafood",
+        "Laundry Detergent",
+        "Dish Soap",
+        "Paper Towels",
+        "Toilet Paper",
+        "Trash Bags",
+        "Cleaning Supplies",
+        "Shampoo",
+        "Toothpaste",
+        "Body Wash",
+        "Vitamins",
+        "Pain Relief",
+        "Skincare",
+        "Razors",
+        "Cosmetics",
+        "Diapers",
+        "Baby Formula",
+        "Baby Food",
+        "Baby Gear",
+        "Dog Food",
+        "Cat Food",
+        "Cat Litter",
+        "Pet Toys",
+        "Headphones",
+        "Phone Accessories",
+        "TVs",
+        "Laptops",
+        "Video Games",
+        "Smart Home",
+        "Batteries",
+        "Men's Clothing",
+        "Women's Clothing",
+        "Kids' Clothing",
+        "Shoes",
+        "Socks & Underwear",
+        "Outerwear",
+        "Action Figures",
+        "Board Games",
+        "Building Sets",
+        "Dolls",
+        "Outdoor Toys",
+        "Bedding",
+        "Kitchenware",
+        "Home Decor",
+        "Furniture",
+        "Storage",
+        "Garden Supplies",
+        "Grills & Outdoor",
+        "Fitness Equipment",
+        "Camping",
+        "Bikes",
+        "Sports Balls",
+        "Motor Oil",
+        "Car Accessories",
+        "Books",
+        "Movies & Music",
+        "School Supplies",
+        "Office Supplies"
+      ],
+      "price_change_pct": 10.000000000000009,
+      "target_units": {
+        "base": 93995.83197115133,
+        "new": 88317.4804021522,
+        "pct": -6.041067406841938,
+        "band_pct": [
+          -6.096887417490319,
+          -5.9917110728322225
+        ]
+      },
+      "category_units": {
+        "base": 229478.08865357126,
+        "new": 227147.9715748544,
+        "pct": -1.0153985037911428,
+        "band_pct": [
+          -1.0295812140857519,
+          -1.0002870712065965
+        ]
+      },
+      "category_revenue": {
+        "base": 2343278.23055032,
+        "new": 2383206.7482764563,
+        "pct": 1.7039597434726828,
+        "band_pct": [
+          1.6739024469242292,
+          1.7312349008126116
+        ]
+      },
+      "target_buyers": {
+        "base": 9010.07169558429,
+        "new": 8904.912546041784
+      },
+      "substitution": {
+        "target_change": -5678.351568999133,
+        "other_products_change": 3348.2344902822906,
+        "category_change": -2330.1170787168667,
+        "most_affected_other_products": [
+          {
+            "name": "Riverridge Soft Drinks Deluxe",
+            "brand": "Riverridge",
+            "change": 19.028987787056735
+          },
+          {
+            "name": "Goldencrest Eggs Mini",
+            "brand": "Goldencrest",
+            "change": 17.406899856837583
+          },
+          {
+            "name": "Riverridge Seafood Essentials",
+            "brand": "Riverridge",
+            "change": 16.72413993755606
+          },
+          {
+            "name": "Aspenwell Bread Original",
+            "brand": "Aspenwell",
+            "change": 15.517606179974734
+          },
+          {
+            "name": "Riverridge Bottled Water Fresh",
+            "brand": "Riverridge",
+            "change": 14.992229665815273
+          }
+        ]
+      },
+      "segments_measure": "target",
+      "by_segment": {
+        "household size": {
+          "1": -6.57594123289117,
+          "2": -6.125382912553123,
+          "3-4": -5.955617949359848,
+          "5+": -5.835170736966521
+        },
+        "price sensitivity (learned)": {
+          "lowest": -4.4650338237080645,
+          "low": -5.859757284514289,
+          "high": -6.043971263123904,
+          "highest": -6.360889738626662
+        }
+      },
+      "seconds": 122.9
+    }
+  ],
+  "runtime_seconds": 195.4
+}
