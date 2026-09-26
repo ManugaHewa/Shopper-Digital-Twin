@@ -68,6 +68,11 @@ def evaluate(model: Recommender, split: Split, mode: str = "all", ks: tuple[int,
              batch_size: int = 2048) -> dict:
     """Metrics for an already-fitted model on the split's prediction window."""
     task = split.task
+    trained_to = getattr(model, "cutoff_day", None)  # models that record how far their training data went
+    if trained_to is not None and trained_to != split.train.cutoff_day:
+        # later: it has seen the answers; earlier: it would predict a different 28 days
+        raise ValueError(f"{model.name} was trained on days up to {trained_to - 1}, but the prediction window "
+                         f"starts on day {split.train.cutoff_day} (they must line up)")
     if max(ks) > split.train.n_items:
         raise ValueError(f"cannot recommend {max(ks)} products from a catalogue of {split.train.n_items}")
     if mode == "all":
