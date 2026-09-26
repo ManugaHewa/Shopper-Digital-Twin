@@ -43,7 +43,7 @@ def load(world: Path) -> dict:
         "sessions": pd.read_parquet(pub / "sessions.parquet"),
         "cats": pd.read_parquet(key / "categories_truth.parquet"),
         "life": pd.read_parquet(key / "life_events.parquet"),
-        "manifest": json.loads((world / "manifest.json").read_text()),
+        "manifest": json.loads((key / "manifest.json").read_text()),
     }
 
 

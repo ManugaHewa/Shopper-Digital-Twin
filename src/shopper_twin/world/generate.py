@@ -3,7 +3,7 @@
 Layout of a saved world:
 
     data/worlds/<name>/
-      manifest.json                 settings, seed, row counts
+      manifest.json                 public facts only: name, start date, number of days, catalogue size
       public/                       what a real store would have (models may read this)
         products.parquet
         categories.parquet
@@ -12,6 +12,7 @@ Layout of a saved world:
         sessions.parquet
         events.parquet
       answer_key/                   the hidden truth (only evaluation may read this)
+        manifest.json               full settings (seed, behaviour rules) and whole-run row counts
         rules.json
         shoppers_truth.parquet
         products_truth.parquet
@@ -127,7 +128,11 @@ def generate_world(cfg: WorldConfig, root: str | Path = "data/worlds", verbose: 
         },
         "revenue": round(revenue, 2),
     }
-    (out / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    (out / "answer_key" / "manifest.json").write_text(json.dumps(manifest, indent=2))
+    # the public manifest must not reveal the seed, the behaviour rules or future totals
+    public_manifest = {"name": cfg.name, "start_date": cfg.start_date, "n_days": cfg.n_days,
+                       "n_products": catalog.n_products, "n_shoppers": population.n}
+    (out / "manifest.json").write_text(json.dumps(public_manifest, indent=2))
     if verbose:
         print(f"Saved world '{cfg.name}' to {out} in {manifest['created_seconds']}s")
         print(json.dumps(manifest["counts"], indent=2))
