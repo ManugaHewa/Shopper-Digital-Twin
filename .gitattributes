@@ -1,0 +1,9 @@
+# Store text files with LF line endings everywhere (stops the LF/CRLF warnings on Windows)
+* text=auto eol=lf
+
+# Binary files: never touch line endings
+*.png binary
+*.pdf binary
+*.zip binary
+*.parquet binary
+*.npz binary
