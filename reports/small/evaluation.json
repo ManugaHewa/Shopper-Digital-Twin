@@ -1,0 +1,3638 @@
+{
+  "world": "small",
+  "twin": "models/small/twin_day152.pt",
+  "window": {
+    "first_day": 152,
+    "last_day": 179,
+    "weeks": [
+      21,
+      22,
+      23,
+      24,
+      25
+    ]
+  },
+  "replicates": 3,
+  "comparator_fit": {
+    "switching_elasticity": -1.2277709953806577,
+    "promo_lift": 2.6112070768996203,
+    "category_elasticity": -0.37016771050719904,
+    "category_promo_lift": 1.1947747132623079
+  },
+  "accuracy": {
+    "twin": {
+      "target_units": {
+        "scenarios": 22,
+        "mean_miss": 8.088048729652899,
+        "median_miss": 2.110987156253536,
+        "within_2_points": 0.5,
+        "median_relative_miss": 0.14101798264265264,
+        "correlation": 0.9928755538709207
+      },
+      "category_units": {
+        "scenarios": 29,
+        "mean_miss": 0.7088177004630946,
+        "median_miss": 0.408752511827315,
+        "within_2_points": 0.9310344827586207,
+        "median_relative_miss": 0.15819518114416145,
+        "correlation": 0.9802730362163878
+      },
+      "category_revenue": {
+        "scenarios": 29,
+        "mean_miss": 0.7768903572453273,
+        "median_miss": 0.5028781066821364,
+        "within_2_points": 0.9310344827586207,
+        "median_relative_miss": 0.2398254852473421,
+        "correlation": 0.9792480518926667
+      }
+    },
+    "pooled": {
+      "target_units": {
+        "scenarios": 22,
+        "mean_miss": 10.637476624217,
+        "median_miss": 3.146073019988826,
+        "within_2_points": 0.4090909090909091,
+        "median_relative_miss": 0.14837120254713054,
+        "correlation": 0.9867964322518185
+      },
+      "category_units": {
+        "scenarios": 29,
+        "mean_miss": 0.6772765811587805,
+        "median_miss": 0.39279230397825105,
+        "within_2_points": 0.896551724137931,
+        "median_relative_miss": 0.14764959053818283,
+        "correlation": 0.9803958562456161
+      },
+      "category_revenue": {
+        "scenarios": 29,
+        "mean_miss": 0.8115050977625082,
+        "median_miss": 0.4007657981590196,
+        "within_2_points": 0.896551724137931,
+        "median_relative_miss": 0.1537917687211813,
+        "correlation": 0.9694756213535405
+      }
+    },
+    "elasticity": {
+      "target_units": {
+        "scenarios": 22,
+        "mean_miss": 14.269230527284218,
+        "median_miss": 5.859260154371684,
+        "within_2_points": 0.36363636363636365,
+        "median_relative_miss": 0.1715474501912777,
+        "correlation": 0.9739419530441056
+      },
+      "category_units": {
+        "scenarios": 29,
+        "mean_miss": 1.517168626328915,
+        "median_miss": 0.7939184056002357,
+        "within_2_points": 0.8275862068965517,
+        "median_relative_miss": 0.40567951318459805,
+        "correlation": 0.8676627230179037
+      },
+      "category_revenue": {
+        "scenarios": 29,
+        "mean_miss": 1.542952447779005,
+        "median_miss": 0.9204378430762938,
+        "within_2_points": 0.7931034482758621,
+        "median_relative_miss": 0.22584737897105064,
+        "correlation": 0.8710375276968834
+      }
+    },
+    "no_reaction": {
+      "target_units": {
+        "scenarios": 22,
+        "mean_miss": 82.28885509824032,
+        "median_miss": 19.765280223172425,
+        "within_2_points": 0.045454545454545456,
+        "median_relative_miss": 1.0,
+        "correlation": NaN
+      },
+      "category_units": {
+        "scenarios": 29,
+        "mean_miss": 4.247543025161978,
+        "median_miss": 3.3703625386455105,
+        "within_2_points": 0.3103448275862069,
+        "median_relative_miss": 1.0,
+        "correlation": 0.1876578956741144
+      },
+      "category_revenue": {
+        "scenarios": 29,
+        "mean_miss": 4.339036279076078,
+        "median_miss": 4.3212864678144225,
+        "within_2_points": 0.3103448275862069,
+        "median_relative_miss": 0.9813981868101723,
+        "correlation": 0.6927860824617436
+      }
+    }
+  },
+  "twin_bands": {
+    "target_units": {
+      "scenarios": 22,
+      "band_contains_truth": 0.09090909090909091,
+      "miss_90th_percentile": 21.992805746352623,
+      "relative_miss_90th_percentile": 0.22474724917097796
+    },
+    "category_units": {
+      "scenarios": 29,
+      "band_contains_truth": 0.10344827586206896,
+      "miss_90th_percentile": 1.4369284530945987,
+      "relative_miss_90th_percentile": 0.6454517252847646
+    },
+    "category_revenue": {
+      "scenarios": 29,
+      "band_contains_truth": 0.10344827586206896,
+      "miss_90th_percentile": 1.9441822699618225,
+      "relative_miss_90th_percentile": 0.708745073143505
+    }
+  },
+  "truth_noise": {
+    "target_units": 0.7157107832880129,
+    "category_units": 0.1262004101928351,
+    "category_revenue": 0.2085275359859491
+  },
+  "segments": {
+    "scenarios": 22,
+    "twin": {
+      "mean_miss": 14.68636185309963
+    },
+    "pooled": {
+      "mean_miss": 22.587142340240586
+    },
+    "gap_highest_vs_lowest": {
+      "truth": 78.04884703535548,
+      "twin": 46.936550711950304,
+      "pooled": 18.763960056348036
+    }
+  },
+  "traits": {
+    "price sensitivity": {
+      "learned": "price_sens",
+      "true": "price_sensitivity",
+      "same_scale": true,
+      "twin": {
+        "r": 0.786904792531573,
+        "range": [
+          0.7803654891092177,
+          0.7932720050466638
+        ],
+        "n": 10000
+      },
+      "group_average_only": {
+        "r": 0.29509613555338393,
+        "range": [
+          0.2795495281425984,
+          0.3104880431831172
+        ],
+        "n": 10000
+      },
+      "by_history": {
+        "least": {
+          "purchases_median": 41.0,
+          "r": 0.6326374262659314,
+          "range": [
+            0.6147018576339973,
+            0.6499191098322509
+          ],
+          "n": 3334
+        },
+        "middle": {
+          "purchases_median": 74.0,
+          "r": 0.7674288752243222,
+          "range": [
+            0.7550850718757341,
+            0.7792288039792943
+          ],
+          "n": 3333
+        },
+        "most": {
+          "purchases_median": 139.0,
+          "r": 0.8584678026700013,
+          "range": [
+            0.8505473413414706,
+            0.8659989028461637
+          ],
+          "n": 3333
+        }
+      },
+      "median": {
+        "learned": 1.6228961944580078,
+        "true": 1.5546197891235352
+      }
+    },
+    "store-brand liking": {
+      "learned": "store",
+      "true": "store_brand_affinity",
+      "same_scale": false,
+      "twin": {
+        "r": 0.8362591818336095,
+        "range": [
+          0.8310912641667199,
+          0.8412826877725843
+        ],
+        "n": 10000
+      },
+      "group_average_only": {
+        "r": 0.26634908481849945,
+        "range": [
+          0.2505353635237577,
+          0.2820207086323988
+        ],
+        "n": 10000
+      },
+      "by_history": {
+        "least": {
+          "purchases_median": 41.0,
+          "r": 0.7152551173810703,
+          "range": [
+            0.700613486872651,
+            0.7292946748505413
+          ],
+          "n": 3334
+        },
+        "middle": {
+          "purchases_median": 74.0,
+          "r": 0.8221359993974021,
+          "range": [
+            0.8123875809510381,
+            0.8314249998882886
+          ],
+          "n": 3333
+        },
+        "most": {
+          "purchases_median": 139.0,
+          "r": 0.8544089500347121,
+          "range": [
+            0.8462801338417982,
+            0.8621400056889866
+          ],
+          "n": 3333
+        }
+      },
+      "median": {
+        "learned": -0.155807763338089,
+        "true": 0.15767771005630493
+      }
+    },
+    "brand loyalty": {
+      "learned": "loyalty",
+      "true": "brand_loyalty",
+      "same_scale": false,
+      "twin": {
+        "r": 0.128408143046778,
+        "range": [
+          0.11170677465673251,
+          0.14503699150009114
+        ],
+        "n": 10000
+      },
+      "group_average_only": {
+        "r": 0.009821141593944621,
+        "range": [
+          -0.007124464174446113,
+          0.02676110834393137
+        ],
+        "n": 10000
+      },
+      "by_history": {
+        "least": {
+          "purchases_median": 41.0,
+          "r": 0.09106521449301097,
+          "range": [
+            0.061881754578871996,
+            0.12009309533133487
+          ],
+          "n": 3334
+        },
+        "middle": {
+          "purchases_median": 74.0,
+          "r": 0.10678808068663652,
+          "range": [
+            0.07767831676417966,
+            0.13571592123937296
+          ],
+          "n": 3333
+        },
+        "most": {
+          "purchases_median": 139.0,
+          "r": 0.18744550794961579,
+          "range": [
+            0.158966912792564,
+            0.2156124317942243
+          ],
+          "n": 3333
+        }
+      },
+      "median": {
+        "learned": 0.8497685790061951,
+        "true": 0.7387335300445557
+      }
+    },
+    "habit": {
+      "learned": "habit",
+      "true": "habit_strength",
+      "same_scale": true,
+      "twin": {
+        "r": 0.5515234280598525,
+        "range": [
+          0.5396219066586354,
+          0.5632045637599306
+        ],
+        "n": 10000
+      },
+      "group_average_only": {
+        "r": 0.005925434699271011,
+        "range": [
+          -0.011020091912643658,
+          0.022867558887512435
+        ],
+        "n": 10000
+      },
+      "by_history": {
+        "least": {
+          "purchases_median": 41.0,
+          "r": 0.4138576266929614,
+          "range": [
+            0.3892365402768267,
+            0.437887783198271
+          ],
+          "n": 3334
+        },
+        "middle": {
+          "purchases_median": 74.0,
+          "r": 0.5652267265310411,
+          "range": [
+            0.5449142790650428,
+            0.5848761567773537
+          ],
+          "n": 3333
+        },
+        "most": {
+          "purchases_median": 139.0,
+          "r": 0.6708128096566349,
+          "range": [
+            0.6543439411815843,
+            0.6866456403019737
+          ],
+          "n": 3333
+        }
+      },
+      "median": {
+        "learned": 1.0092155933380127,
+        "true": 0.9328293800354004
+      }
+    }
+  },
+  "taste": {
+    "shoppers": 1000,
+    "twin": 0.6369820710285622,
+    "popularity": 0.40235536892406254
+  },
+  "calibration": {
+    "pairs": 50000000,
+    "pairs_bought": 146073,
+    "methods": {
+      "twin": {
+        "brier": 0.002594473534464564,
+        "logloss": 0.013016529890179294,
+        "pairs_bought_predicted": 146287.12327731895,
+        "bins": [
+          {
+            "from": 0.0,
+            "to": 0.002,
+            "pairs": 42347449,
+            "predicted": 0.00023278049866050937,
+            "actual": 0.00034375152090034987
+          },
+          {
+            "from": 0.002,
+            "to": 0.005,
+            "pairs": 3186096,
+            "predicted": 0.0032052083961990967,
+            "actual": 0.0038802973921689744
+          },
+          {
+            "from": 0.005,
+            "to": 0.01,
+            "pairs": 1809516,
+            "predicted": 0.007096199123982445,
+            "actual": 0.007918692070144723
+          },
+          {
+            "from": 0.01,
+            "to": 0.02,
+            "pairs": 1276953,
+            "predicted": 0.014084940708936004,
+            "actual": 0.014264424767395511
+          },
+          {
+            "from": 0.02,
+            "to": 0.05,
+            "pairs": 915094,
+            "predicted": 0.030593049206860613,
+            "actual": 0.02783211342222766
+          },
+          {
+            "from": 0.05,
+            "to": 0.1,
+            "pairs": 271498,
+            "predicted": 0.06831946262761157,
+            "actual": 0.05913119065333815
+          },
+          {
+            "from": 0.1,
+            "to": 0.2,
+            "pairs": 103476,
+            "predicted": 0.13715609886634825,
+            "actual": 0.12844524334145116
+          },
+          {
+            "from": 0.2,
+            "to": 0.4,
+            "pairs": 55876,
+            "predicted": 0.2841014630356895,
+            "actual": 0.2732479060777436
+          },
+          {
+            "from": 0.4,
+            "to": 0.6,
+            "pairs": 23756,
+            "predicted": 0.4857230448223118,
+            "actual": 0.4358056911938037
+          },
+          {
+            "from": 0.6,
+            "to": 1.0,
+            "pairs": 10286,
+            "predicted": 0.7039763233138807,
+            "actual": 0.6002333268520319
+          }
+        ]
+      },
+      "popularity": {
+        "brier": 0.00289394828125,
+        "logloss": 0.01795487625,
+        "pairs_bought_predicted": 147386.73828125,
+        "bins": [
+          {
+            "from": 0.0,
+            "to": 0.002,
+            "pairs": 30070000,
+            "predicted": 0.0006680991034564172,
+            "actual": 0.0007221815763219156
+          },
+          {
+            "from": 0.002,
+            "to": 0.005,
+            "pairs": 11250000,
+            "predicted": 0.003204088898582591,
+            "actual": 0.0033043555555555557
+          },
+          {
+            "from": 0.005,
+            "to": 0.01,
+            "pairs": 5590000,
+            "predicted": 0.006996243315780525,
+            "actual": 0.006760644007155635
+          },
+          {
+            "from": 0.01,
+            "to": 0.02,
+            "pairs": 2440000,
+            "predicted": 0.013650409854398887,
+            "actual": 0.013228688524590164
+          },
+          {
+            "from": 0.02,
+            "to": 0.05,
+            "pairs": 610000,
+            "predicted": 0.02670983622064356,
+            "actual": 0.024301639344262296
+          },
+          {
+            "from": 0.05,
+            "to": 0.1,
+            "pairs": 40000,
+            "predicted": 0.063549998216331,
+            "actual": 0.057225
+          }
+        ]
+      },
+      "own history": {
+        "brier": 0.00277195421875,
+        "logloss": 0.0159157471875,
+        "pairs_bought_predicted": 153676.1220703125,
+        "bins": [
+          {
+            "from": 0.0,
+            "to": 0.002,
+            "pairs": 33575420,
+            "predicted": 0.0006826651390257638,
+            "actual": 0.0007591863333355175
+          },
+          {
+            "from": 0.002,
+            "to": 0.005,
+            "pairs": 11278526,
+            "predicted": 0.0031542961215017024,
+            "actual": 0.0031238124556347167
+          },
+          {
+            "from": 0.005,
+            "to": 0.01,
+            "pairs": 3895387,
+            "predicted": 0.006783636354621275,
+            "actual": 0.00616986194183017
+          },
+          {
+            "from": 0.01,
+            "to": 0.02,
+            "pairs": 655150,
+            "predicted": 0.012313650736263565,
+            "actual": 0.008846828970464779
+          },
+          {
+            "from": 0.02,
+            "to": 0.05,
+            "pairs": 143258,
+            "predicted": 0.03304407464070641,
+            "actual": 0.03588630303368747
+          },
+          {
+            "from": 0.05,
+            "to": 0.1,
+            "pairs": 203256,
+            "predicted": 0.07448979170048195,
+            "actual": 0.06995119455268232
+          },
+          {
+            "from": 0.1,
+            "to": 0.2,
+            "pairs": 195086,
+            "predicted": 0.13681212480111707,
+            "actual": 0.12172067703474365
+          },
+          {
+            "from": 0.2,
+            "to": 0.4,
+            "pairs": 51382,
+            "predicted": 0.2533246546764473,
+            "actual": 0.22274337316570006
+          },
+          {
+            "from": 0.4,
+            "to": 0.6,
+            "pairs": 2535,
+            "predicted": 0.43652130337156486,
+            "actual": 0.38303747534516763
+          }
+        ]
+      }
+    }
+  },
+  "speed": {
+    "twin_seconds_per_scenario": 1.6561054000048898,
+    "true_store_seconds_per_run": 7.423760199996953,
+    "shoppers": 10000
+  },
+  "scenarios": [
+    {
+      "name": "Coffee +20%",
+      "description": "Coffee price +20%",
+      "kind": "price",
+      "n_target_products": 81,
+      "categories": [
+        "Coffee"
+      ],
+      "price_change_pct": 19.999999999999993,
+      "truth": {
+        "target_units": {
+          "base": 4411.333333333333,
+          "new": 4179.0,
+          "pct": -5.266737192080995,
+          "replicates": [
+            -5.3567,
+            -5.2535,
+            -5.1892
+          ],
+          "se": 0.048793018731724
+        },
+        "category_units": {
+          "base": 4411.333333333333,
+          "new": 4179.0,
+          "pct": -5.266737192080995,
+          "replicates": [
+            -5.3567,
+            -5.2535,
+            -5.1892
+          ],
+          "se": 0.048793018731724
+        },
+        "category_revenue": {
+          "base": 28742.21916794777,
+          "new": 32532.451061821,
+          "pct": 13.186984177268934,
+          "replicates": [
+            13.1913,
+            13.1064,
+            13.262
+          ],
+          "se": 0.0449703937416946
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -6.061374901553396,
+          "category_units": -6.061374901553396,
+          "category_revenue": 12.367431854695221
+        },
+        "pooled": {
+          "target_units": -6.134548821008323,
+          "category_units": -6.134548821008313,
+          "category_revenue": 12.222833397136078
+        },
+        "elasticity": {
+          "target_units": -6.526251447038156,
+          "category_units": -6.526251447038156,
+          "category_revenue": 12.168498263554216
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 19.999999999999996
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -6.177230780681827,
+          -5.939426691792525
+        ],
+        "category_units": [
+          -6.177230780681827,
+          -5.939426691792557
+        ],
+        "category_revenue": [
+          12.233946923975695,
+          12.51479092390528
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -3.0904235024799664,
+          "low": -6.265560165975104,
+          "high": -5.712685522262673,
+          "highest": -5.634715025906734
+        },
+        "twin": {
+          "lowest": -5.455169523521675,
+          "low": -6.343370504295464,
+          "high": -6.4311909125563504,
+          "highest": -5.976702268953749
+        },
+        "pooled": {
+          "lowest": -7.282224547627713,
+          "low": -6.58032042771568,
+          "high": -5.95170091302516,
+          "highest": -5.26424262873344
+        }
+      }
+    },
+    {
+      "name": "Store-brand milk -15%",
+      "description": "store-brand Milk price -15%",
+      "kind": "price",
+      "n_target_products": 17,
+      "categories": [
+        "Milk"
+      ],
+      "price_change_pct": -15.000000000000002,
+      "truth": {
+        "target_units": {
+          "base": 2913.0,
+          "new": 3387.6666666666665,
+          "pct": 16.294770568714956,
+          "replicates": [
+            16.3394,
+            16.7762,
+            15.758
+          ],
+          "se": 0.2949162254995357
+        },
+        "category_units": {
+          "base": 8618.666666666666,
+          "new": 8745.333333333334,
+          "pct": 1.4696782178218015,
+          "replicates": [
+            1.3518,
+            1.2939,
+            1.7744
+          ],
+          "se": 0.15145455525362422
+        },
+        "category_revenue": {
+          "base": 25365.313343048096,
+          "new": 24273.68650861979,
+          "pct": -4.303620537482889,
+          "replicates": [
+            -4.5144,
+            -4.4258,
+            -3.9592
+          ],
+          "se": 0.1722110126209984
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 12.554703200135453,
+          "category_units": 1.4590459684072687,
+          "category_revenue": -4.352352777731793
+        },
+        "pooled": {
+          "target_units": 12.365288709001687,
+          "category_units": 1.4233991930328926,
+          "category_revenue": -4.199170622133696
+        },
+        "elasticity": {
+          "target_units": 15.36768805753399,
+          "category_units": 2.2635966234220373,
+          "category_revenue": -4.315083716721135
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -4.992137735679725
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          12.31246363921495,
+          12.806348688277186
+        ],
+        "category_units": [
+          1.4209286625781947,
+          1.5002688583683588
+        ],
+        "category_revenue": [
+          -4.4753650619119645,
+          -4.2176730375061116
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 7.400000000000007,
+          "low": 12.791783380018673,
+          "high": 15.550906555090659,
+          "highest": 18.69767441860466
+        },
+        "twin": {
+          "lowest": 12.007429000252202,
+          "low": 12.334410072626255,
+          "high": 11.955562820926179,
+          "highest": 13.085211543114173
+        },
+        "pooled": {
+          "lowest": 17.637840089846414,
+          "low": 13.840891899538965,
+          "high": 11.872495411478035,
+          "highest": 10.972507904275863
+        }
+      }
+    },
+    {
+      "name": "Best-selling cereal out of stock (Riverridge Breakfast Cereal Pro)",
+      "description": "product 602 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Breakfast Cereal"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 416.3333333333333,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 6030.0,
+          "new": 5979.666666666667,
+          "pct": -0.8347153123272499,
+          "replicates": [
+            -0.9601,
+            -0.7841,
+            -0.7597
+          ],
+          "se": 0.06312662662184768
+        },
+        "category_revenue": {
+          "base": 19503.36651825905,
+          "new": 19630.70317339897,
+          "pct": 0.6528957706902094,
+          "replicates": [
+            0.5445,
+            0.6747,
+            0.7392
+          ],
+          "se": 0.057266741282329066
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": -0.7348894435622033,
+          "category_revenue": 0.7757200272889619
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": -1.1525604630852726,
+          "category_revenue": 0.3633914694081586
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": -3.3306690738754696e-14,
+          "category_revenue": 2.0905102965907973
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -7.678513205086402,
+          "category_revenue": -5.74852301767298
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          -0.8041648835482046,
+          -0.65561674710717
+        ],
+        "category_revenue": [
+          0.7140691736788496,
+          0.8665478699341467
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": -0.33066960595204975,
+          "low": -0.572634116937909,
+          "high": -0.7607607607607592,
+          "highest": -1.3337670787247902
+        },
+        "twin": {
+          "lowest": -0.44924046145354835,
+          "low": -0.745630682286591,
+          "high": -0.988477182024361,
+          "highest": -0.6930225138905399
+        },
+        "pooled": {
+          "lowest": -0.8459696588121957,
+          "low": -0.9129621903196328,
+          "high": -1.4329999029567886,
+          "highest": -1.2596900603507932
+        }
+      }
+    },
+    {
+      "name": "25% off Rivermark snacks",
+      "description": "Rivermark Chips & Snacks on promotion at 25% off",
+      "kind": "promotion",
+      "n_target_products": 13,
+      "categories": [
+        "Chips & Snacks"
+      ],
+      "price_change_pct": -23.305860736849578,
+      "truth": {
+        "target_units": {
+          "base": 1214.3333333333333,
+          "new": 3350.6666666666665,
+          "pct": 175.92643425748008,
+          "replicates": [
+            181.6082,
+            174.7173,
+            171.7638
+          ],
+          "se": 2.9166339990914736
+        },
+        "category_units": {
+          "base": 7011.0,
+          "new": 7374.0,
+          "pct": 5.177578091570378,
+          "replicates": [
+            5.2654,
+            5.7192,
+            4.5474
+          ],
+          "se": 0.3411149902072074
+        },
+        "category_revenue": {
+          "base": 21350.889912923176,
+          "new": 21394.834595857665,
+          "pct": 0.20582131758306588,
+          "replicates": [
+            0.6205,
+            0.5132,
+            -0.5131
+          ],
+          "se": 0.36132067214590835
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 173.35452001029168,
+          "category_units": 6.553823611016352,
+          "category_revenue": 2.5543501214932762
+        },
+        "pooled": {
+          "target_units": 168.82345897472595,
+          "category_units": 5.942045376770211,
+          "category_revenue": 2.4017399173246634
+        },
+        "elasticity": {
+          "target_units": 169.5636277294268,
+          "category_units": 4.219666897865149,
+          "category_revenue": 0.06350294424839475
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -4.8035415225350375
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          170.19617637238662,
+          177.0215512136594
+        ],
+        "category_units": [
+          6.405178463456754,
+          6.733897892278888
+        ],
+        "category_revenue": [
+          2.427878525140066,
+          2.7198583040952196
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 104.79735318444993,
+          "low": 132.79999999999998,
+          "high": 214.72320376914018,
+          "highest": 303.80281690140845
+        },
+        "twin": {
+          "lowest": 107.73915119680737,
+          "low": 161.1733135327448,
+          "high": 206.7779437556746,
+          "highest": 261.2170808770362
+        },
+        "pooled": {
+          "lowest": 133.33912717352572,
+          "low": 161.45876216114786,
+          "high": 188.02626718883567,
+          "highest": 203.5280337009413
+        }
+      }
+    },
+    {
+      "name": "All store-brand products +10%",
+      "description": "store-brand price +10%",
+      "kind": "price",
+      "n_target_products": 1087,
+      "categories": [
+        "Milk",
+        "Eggs",
+        "Cheese",
+        "Yogurt",
+        "Fresh Fruit",
+        "Fresh Vegetables",
+        "Bread",
+        "Pasta & Rice",
+        "Canned Goods",
+        "Breakfast Cereal",
+        "Coffee",
+        "Tea",
+        "Condiments & Sauces",
+        "Baking Supplies",
+        "Chips & Snacks",
+        "Cookies & Candy",
+        "Soft Drinks",
+        "Juice",
+        "Bottled Water",
+        "Frozen Meals",
+        "Ice Cream",
+        "Frozen Vegetables",
+        "Fresh Meat",
+        "Seafood",
+        "Laundry Detergent",
+        "Dish Soap",
+        "Paper Towels",
+        "Toilet Paper",
+        "Trash Bags",
+        "Cleaning Supplies",
+        "Shampoo",
+        "Toothpaste",
+        "Body Wash",
+        "Vitamins",
+        "Pain Relief",
+        "Skincare",
+        "Razors",
+        "Cosmetics",
+        "Diapers",
+        "Baby Formula",
+        "Baby Food",
+        "Baby Gear",
+        "Dog Food",
+        "Cat Food",
+        "Cat Litter",
+        "Pet Toys",
+        "Headphones",
+        "Phone Accessories",
+        "TVs",
+        "Laptops",
+        "Video Games",
+        "Smart Home",
+        "Batteries",
+        "Men's Clothing",
+        "Women's Clothing",
+        "Kids' Clothing",
+        "Shoes",
+        "Socks & Underwear",
+        "Outerwear",
+        "Action Figures",
+        "Board Games",
+        "Building Sets",
+        "Dolls",
+        "Outdoor Toys",
+        "Bedding",
+        "Kitchenware",
+        "Home Decor",
+        "Furniture",
+        "Storage",
+        "Garden Supplies",
+        "Grills & Outdoor",
+        "Fitness Equipment",
+        "Camping",
+        "Bikes",
+        "Sports Balls",
+        "Motor Oil",
+        "Car Accessories",
+        "Books",
+        "Movies & Music",
+        "School Supplies",
+        "Office Supplies"
+      ],
+      "price_change_pct": 10.000000000000009,
+      "truth": {
+        "target_units": {
+          "base": 93464.33333333333,
+          "new": 86655.0,
+          "pct": -7.2854885820972655,
+          "replicates": [
+            -7.2331,
+            -7.3599,
+            -7.2641
+          ],
+          "se": 0.038177765940165635
+        },
+        "category_units": {
+          "base": 233120.33333333334,
+          "new": 230509.33333333334,
+          "pct": -1.120022420466682,
+          "replicates": [
+            -1.1134,
+            -1.1064,
+            -1.1402
+          ],
+          "se": 0.010306707233059716
+        },
+        "category_revenue": {
+          "base": 2237146.2760582766,
+          "new": 2266910.0473037404,
+          "pct": 1.330434740186326,
+          "replicates": [
+            1.3485,
+            1.342,
+            1.3011
+          ],
+          "se": 0.014838157287714699
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -6.041067406841938,
+          "category_units": -1.0153985037911428,
+          "category_revenue": 1.7039597434726828
+        },
+        "pooled": {
+          "target_units": -6.117526076557289,
+          "category_units": -1.0901657856212998,
+          "category_revenue": 1.7116995850170458
+        },
+        "elasticity": {
+          "target_units": -7.998324063611218,
+          "category_units": -1.4059046512652107,
+          "category_revenue": 2.278804844504201
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 2.8823716368320484
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -6.096887417490319,
+          -5.9917110728322225
+        ],
+        "category_units": [
+          -1.0295812140857519,
+          -1.0002870712065965
+        ],
+        "category_revenue": [
+          1.6739024469242292,
+          1.7312349008126116
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -4.292527821939585,
+          "low": -5.964639107941128,
+          "high": -6.642148917381152,
+          "highest": -8.545438047275534
+        },
+        "twin": {
+          "lowest": -6.012063036273673,
+          "low": -6.15017096158158,
+          "high": -5.793658496140308,
+          "highest": -6.177975772563526
+        },
+        "pooled": {
+          "lowest": -8.155630186623597,
+          "low": -6.841066419024589,
+          "high": -5.889814162766605,
+          "highest": -5.3820481484396225
+        }
+      }
+    },
+    {
+      "name": "Socks & Underwear +10%",
+      "description": "Socks & Underwear price +10%",
+      "kind": "price",
+      "n_target_products": 54,
+      "categories": [
+        "Socks & Underwear"
+      ],
+      "price_change_pct": 10.000000000000007,
+      "truth": {
+        "target_units": {
+          "base": 979.3333333333334,
+          "new": 932.6666666666666,
+          "pct": -4.765146358066719,
+          "replicates": [
+            -5.8639,
+            -5.0696,
+            -3.3777
+          ],
+          "se": 0.7331264536575459
+        },
+        "category_units": {
+          "base": 979.3333333333334,
+          "new": 932.6666666666666,
+          "pct": -4.765146358066719,
+          "replicates": [
+            -5.8639,
+            -5.0696,
+            -3.3777
+          ],
+          "se": 0.7331264536575459
+        },
+        "category_revenue": {
+          "base": 9494.873109181723,
+          "new": 9974.073765182495,
+          "pct": 5.046941128021776,
+          "replicates": [
+            4.277,
+            4.7823,
+            6.0747
+          ],
+          "se": 0.5352783985064627
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -4.5106769579892685,
+          "category_units": -4.5106769579892685,
+          "category_revenue": 5.048166242990204
+        },
+        "pooled": {
+          "target_units": -4.409867321464267,
+          "category_units": -4.409867321464233,
+          "category_revenue": 5.087922122404409
+        },
+        "elasticity": {
+          "target_units": -3.466564042175757,
+          "category_units": -3.466564042175757,
+          "category_revenue": 6.186779553606692
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 10.000000000000032
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -4.571442387532946,
+          -4.433401864725888
+        ],
+        "category_units": [
+          -4.571442387532946,
+          -4.433401864725899
+        ],
+        "category_revenue": [
+          4.9807315313560805,
+          5.136739650090169
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -1.2499999999999956,
+          "low": -2.4137931034482807,
+          "high": -4.37086092715232,
+          "highest": -8.82658359293873
+        },
+        "twin": {
+          "lowest": -3.2336329569891187,
+          "low": -4.096482496192766,
+          "high": -4.8642245948571805,
+          "highest": -5.509082653400177
+        },
+        "pooled": {
+          "lowest": -4.198911812332051,
+          "low": -4.334366244045251,
+          "high": -4.484406422061726,
+          "highest": -4.586645355936048
+        }
+      }
+    },
+    {
+      "name": "Silvercrest Furniture -15%",
+      "description": "Silvercrest Furniture price -15%",
+      "kind": "price",
+      "n_target_products": 17,
+      "categories": [
+        "Furniture"
+      ],
+      "price_change_pct": -15.000000000000002,
+      "truth": {
+        "target_units": {
+          "base": 281.6666666666667,
+          "new": 318.3333333333333,
+          "pct": 13.017751479289918,
+          "replicates": [
+            14.0065,
+            16.6038,
+            8.4249
+          ],
+          "se": 2.4128581182671454
+        },
+        "category_units": {
+          "base": 631.0,
+          "new": 658.3333333333334,
+          "pct": 4.331748547279446,
+          "replicates": [
+            4.5802,
+            5.7878,
+            2.5974
+          ],
+          "se": 0.9299994465689165
+        },
+        "category_revenue": {
+          "base": 104038.69113922119,
+          "new": 100147.4119082133,
+          "pct": -3.7402231692829635,
+          "replicates": [
+            -3.9068,
+            -1.7162,
+            -5.5821
+          ],
+          "se": 1.1192683467543771
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 14.181073490534125,
+          "category_units": 4.5294459540262455,
+          "category_revenue": -3.131696319089028
+        },
+        "pooled": {
+          "target_units": 15.380415659554302,
+          "category_units": 5.1976956903931,
+          "category_revenue": -2.71162452316116
+        },
+        "elasticity": {
+          "target_units": 14.806075220791826,
+          "category_units": 2.4734562179580477,
+          "category_revenue": -3.968038175668387
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -8.430286535776544
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          13.820142752319244,
+          14.686201201210544
+        ],
+        "category_units": [
+          4.438922754258885,
+          4.6289606398585015
+        ],
+        "category_revenue": [
+          -3.316897878719217,
+          -2.89712392512057
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 4.53608247422681,
+          "low": 17.010309278350523,
+          "high": 27.118644067796605,
+          "highest": 47.91666666666667
+        },
+        "twin": {
+          "lowest": 6.653126389049646,
+          "low": 14.847380403275556,
+          "high": 23.308207588293463,
+          "highest": 36.48420815584055
+        },
+        "pooled": {
+          "lowest": 11.719289727573013,
+          "low": 15.462569975494333,
+          "high": 18.80522862222509,
+          "highest": 22.41526073372544
+        }
+      }
+    },
+    {
+      "name": "15% off Aspenwell Condiments & Sauces",
+      "description": "Aspenwell Condiments & Sauces on promotion at 15% off",
+      "kind": "promotion",
+      "n_target_products": 6,
+      "categories": [
+        "Condiments & Sauces"
+      ],
+      "price_change_pct": -15.000000000000005,
+      "truth": {
+        "target_units": {
+          "base": 201.0,
+          "new": 636.6666666666666,
+          "pct": 216.74958540630183,
+          "replicates": [
+            263.5359,
+            178.125,
+            217.6768
+          ],
+          "se": 24.67840624767143
+        },
+        "category_units": {
+          "base": 3394.0,
+          "new": 3425.6666666666665,
+          "pct": 0.9330190532311988,
+          "replicates": [
+            1.2452,
+            0.0593,
+            1.4851
+          ],
+          "se": 0.4407794528705197
+        },
+        "category_revenue": {
+          "base": 9219.059970696768,
+          "new": 9013.614976922672,
+          "pct": -2.2284809343589562,
+          "replicates": [
+            -2.1996,
+            -3.182,
+            -1.3145
+          ],
+          "se": 0.5393509174294905
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 229.92626780754577,
+          "category_units": 2.2340434888328042,
+          "category_revenue": -1.514237631819637
+        },
+        "pooled": {
+          "target_units": 238.88285682796203,
+          "category_units": 1.853061587592908,
+          "category_revenue": -1.5380145988252214
+        },
+        "elasticity": {
+          "target_units": 181.63099753527928,
+          "category_units": 1.6529830140459945,
+          "category_revenue": -1.575196791349609
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -1.0010350925656608
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          224.00943006997076,
+          236.7345722474103
+        ],
+        "category_units": [
+          2.1023533547740616,
+          2.3586692440355903
+        ],
+        "category_revenue": [
+          -1.5981590106727184,
+          -1.4471972150654517
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 162.2340425531915,
+          "low": 209.16666666666669,
+          "high": 179.88165680473372,
+          "highest": 354.76190476190476
+        },
+        "twin": {
+          "lowest": 183.68632269718103,
+          "low": 214.1048730040924,
+          "high": 253.99414390200823,
+          "highest": 280.9037288392593
+        },
+        "pooled": {
+          "lowest": 219.236350081655,
+          "low": 227.27571720406308,
+          "high": 246.82817123782726,
+          "highest": 260.81507183622796
+        }
+      }
+    },
+    {
+      "name": "Everyday Value Baby Formula Plus out of stock",
+      "description": "product 2414 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Baby Formula"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 436.3333333333333,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 3490.0,
+          "new": 3432.0,
+          "pct": -1.661891117478509,
+          "replicates": [
+            -2.3086,
+            -1.2181,
+            -1.4358
+          ],
+          "se": 0.3331902483427494
+        },
+        "category_revenue": {
+          "base": 83900.1005191803,
+          "new": 87076.01401201884,
+          "pct": 3.7853512369898867,
+          "replicates": [
+            3.2781,
+            3.6574,
+            4.4044
+          ],
+          "se": 0.3308472117496677
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": 0.6027336597707045,
+          "category_revenue": 5.715758890556888
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": 0.7154005657239892,
+          "category_revenue": 7.475746418985518
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": 0.0,
+          "category_revenue": 6.320908918447232
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -13.777526821005083,
+          "category_revenue": -8.327482824128218
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          0.3249830664232023,
+          0.9196613145457732
+        ],
+        "category_revenue": [
+          5.077432314576699,
+          6.350146468836462
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": 0.05865102639295294,
+          "low": -1.294033069734002,
+          "high": -1.3059092393078675,
+          "highest": -2.713987473903967
+        },
+        "twin": {
+          "lowest": -0.294321820002752,
+          "low": -0.5569417086543682,
+          "high": 0.68047432882683,
+          "highest": 1.2993871823095304
+        },
+        "pooled": {
+          "lowest": -0.6720936586327664,
+          "low": -0.22494296784170142,
+          "high": 0.9667554685294899,
+          "highest": 1.4256028034128398
+        }
+      }
+    },
+    {
+      "name": "Skincare +10%",
+      "description": "Skincare price +10%",
+      "kind": "price",
+      "n_target_products": 81,
+      "categories": [
+        "Skincare"
+      ],
+      "price_change_pct": 10.000000000000007,
+      "truth": {
+        "target_units": {
+          "base": 1950.0,
+          "new": 1901.0,
+          "pct": -2.5128205128205128,
+          "replicates": [
+            -2.5497,
+            -2.5013,
+            -2.487
+          ],
+          "se": 0.01896946638458274
+        },
+        "category_units": {
+          "base": 1950.0,
+          "new": 1901.0,
+          "pct": -2.5128205128205128,
+          "replicates": [
+            -2.5497,
+            -2.5013,
+            -2.487
+          ],
+          "se": 0.01896946638458274
+        },
+        "category_revenue": {
+          "base": 21655.99955368042,
+          "new": 23195.138521385194,
+          "pct": 7.10721739668303,
+          "replicates": [
+            6.7135,
+            7.4181,
+            7.1881
+          ],
+          "se": 0.2074452214875217
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -2.9103366090289073,
+          "category_units": -2.9103366090289184,
+          "category_revenue": 6.752036319894539
+        },
+        "pooled": {
+          "target_units": -3.138252347426196,
+          "category_units": -3.138252347426196,
+          "category_revenue": 6.5000404248842125
+        },
+        "elasticity": {
+          "target_units": -3.466564042175724,
+          "category_units": -3.466564042175724,
+          "category_revenue": 6.186779553606736
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 10.000000000000009
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -2.9571418518438173,
+          -2.8641947584632077
+        ],
+        "category_units": [
+          -2.9571418518437964,
+          -2.8641947584632077
+        ],
+        "category_revenue": [
+          6.696883236722772,
+          6.803529265937051
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -1.963864886095834,
+          "low": -2.741702741702745,
+          "high": -2.4752475247524774,
+          "highest": -2.7936507936507926
+        },
+        "twin": {
+          "lowest": -2.827893219655775,
+          "low": -3.1885414964995418,
+          "high": -2.9002046556903083,
+          "highest": -2.7454884630365606
+        },
+        "pooled": {
+          "lowest": -3.4908660455568397,
+          "low": -3.206969157153672,
+          "high": -2.9209446950641205,
+          "highest": -2.975009754151481
+        }
+      }
+    },
+    {
+      "name": "Pinebrook Tea +15%",
+      "description": "Pinebrook Tea price +15%",
+      "kind": "price",
+      "n_target_products": 6,
+      "categories": [
+        "Tea"
+      ],
+      "price_change_pct": 14.999999999999995,
+      "truth": {
+        "target_units": {
+          "base": 336.6666666666667,
+          "new": 279.0,
+          "pct": -17.12871287128713,
+          "replicates": [
+            -15.7233,
+            -17.4515,
+            -18.1269
+          ],
+          "se": 0.7157107832880129
+        },
+        "category_units": {
+          "base": 3553.0,
+          "new": 3538.0,
+          "pct": -0.422178440754295,
+          "replicates": [
+            -0.4738,
+            -0.4571,
+            -0.336
+          ],
+          "se": 0.04341114415197769
+        },
+        "category_revenue": {
+          "base": 13486.969770590464,
+          "new": 13584.826268609366,
+          "pct": 0.7255632635307485,
+          "replicates": [
+            0.622,
+            0.796,
+            0.7593
+          ],
+          "se": 0.05295254677812276
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -16.088866704191485,
+          "category_units": -0.4108521280947852,
+          "category_revenue": 0.40398985136225196
+        },
+        "pooled": {
+          "target_units": -15.229023704799749,
+          "category_units": -0.44053100326949535,
+          "category_revenue": 0.5244104206854283
+        },
+        "elasticity": {
+          "target_units": -14.904260252503022,
+          "category_units": -0.4914369730893431,
+          "category_revenue": 0.7006399871963165
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 1.5392855721109155
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -16.45652770420966,
+          -15.74624298196631
+        ],
+        "category_units": [
+          -0.42523486015386913,
+          -0.3973749920360009
+        ],
+        "category_revenue": [
+          0.37821469834027455,
+          0.4313219612624497
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -6.5573770491803245,
+          "low": -9.282700421940927,
+          "high": -14.385964912280702,
+          "highest": -32.131147540983605
+        },
+        "twin": {
+          "lowest": -10.32632326461792,
+          "low": -12.85609370923929,
+          "high": -16.7026910212276,
+          "highest": -23.765027525988415
+        },
+        "pooled": {
+          "lowest": -14.815056462647004,
+          "low": -13.981571181874896,
+          "high": -15.280644169398593,
+          "highest": -16.80189889809205
+        }
+      }
+    },
+    {
+      "name": "25% off Northwood Vitamins",
+      "description": "Northwood Vitamins on promotion at 25% off",
+      "kind": "promotion",
+      "n_target_products": 6,
+      "categories": [
+        "Vitamins"
+      ],
+      "price_change_pct": -25.0,
+      "truth": {
+        "target_units": {
+          "base": 259.0,
+          "new": 629.6666666666666,
+          "pct": 143.11454311454307,
+          "replicates": [
+            136.4964,
+            155.0,
+            139.1635
+          ],
+          "se": 5.774914714692242
+        },
+        "category_units": {
+          "base": 1976.6666666666667,
+          "new": 2035.6666666666667,
+          "pct": 2.9848229342327226,
+          "replicates": [
+            3.7,
+            2.7163,
+            2.5232
+          ],
+          "se": 0.3643786026581972
+        },
+        "category_revenue": {
+          "base": 18570.399547576904,
+          "new": 18087.38373676936,
+          "pct": -2.6009984845510203,
+          "replicates": [
+            -1.608,
+            -2.8434,
+            -3.3812
+          ],
+          "se": 0.5249127187932336
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 166.0869181214633,
+          "category_units": 4.368468484271304,
+          "category_revenue": -0.8066684222952758
+        },
+        "pooled": {
+          "target_units": 189.8217120803806,
+          "category_units": 5.910128641376744,
+          "category_revenue": 0.7393186779459437
+        },
+        "elasticity": {
+          "target_units": 187.11211009084724,
+          "category_units": 3.6440727614843516,
+          "category_revenue": -1.3812952031029613
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -3.871083019166932
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          160.9959219799201,
+          171.6655552524706
+        ],
+        "category_units": [
+          4.220886734348069,
+          4.5500986840762705
+        ],
+        "category_revenue": [
+          -0.9703057626143335,
+          -0.6512822262560095
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 98.89196675900278,
+          "low": 120.52631578947368,
+          "high": 177.07006369426753,
+          "highest": 359.42028985507244
+        },
+        "twin": {
+          "lowest": 120.67150032454754,
+          "low": 161.33450797170048,
+          "high": 197.78058505512362,
+          "highest": 297.7997651155086
+        },
+        "pooled": {
+          "lowest": 151.47813889028936,
+          "low": 187.34709673593923,
+          "high": 206.9606928264364,
+          "highest": 250.28469113936373
+        }
+      }
+    },
+    {
+      "name": "Everyday Value Kids' Clothing Plus out of stock",
+      "description": "product 3432 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Kids' Clothing"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 23.666666666666668,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 661.3333333333334,
+          "new": 651.3333333333334,
+          "pct": -1.5120967741935498,
+          "replicates": [
+            -1.6667,
+            -1.1679,
+            -1.7214
+          ],
+          "se": 0.17610127551269422
+        },
+        "category_revenue": {
+          "base": 8341.719848632812,
+          "new": 8219.31985092163,
+          "pct": -1.4673232850326734,
+          "replicates": [
+            -1.4284,
+            -1.1861,
+            -1.8202
+          ],
+          "se": 0.18474814028683872
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": -1.4545874845759532,
+          "category_revenue": -0.964445178350537
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": -1.3547890320098177,
+          "category_revenue": -0.9437683607580571
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": -4.440892098500626e-14,
+          "category_revenue": 0.5526160852929562
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -4.88245931283906,
+          "category_revenue": -4.356824483066701
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          -1.696232895815211,
+          -1.245692311715181
+        ],
+        "category_revenue": [
+          -1.1576993825575443,
+          -0.7917427186013992
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": 1.0362694300518172,
+          "low": -0.2590673575129543,
+          "high": -3.7328094302554016,
+          "highest": -1.9914651493598834
+        },
+        "twin": {
+          "lowest": 0.4251917166491648,
+          "low": -0.6237710917350148,
+          "high": -2.6268090697092017,
+          "highest": -2.464876337242028
+        },
+        "pooled": {
+          "lowest": -0.7847301400003559,
+          "low": -0.8161622934819368,
+          "high": -1.7670308360214992,
+          "highest": -1.8983656555845996
+        }
+      }
+    },
+    {
+      "name": "Toothpaste -10%",
+      "description": "Toothpaste price -10%",
+      "kind": "price",
+      "n_target_products": 54,
+      "categories": [
+        "Toothpaste"
+      ],
+      "price_change_pct": -9.999999999999998,
+      "truth": {
+        "target_units": {
+          "base": 2782.3333333333335,
+          "new": 2833.3333333333335,
+          "pct": 1.8329938900203624,
+          "replicates": [
+            1.9421,
+            1.5786,
+            1.9706
+          ],
+          "se": 0.1262004101928351
+        },
+        "category_units": {
+          "base": 2782.3333333333335,
+          "new": 2833.3333333333335,
+          "pct": 1.8329938900203624,
+          "replicates": [
+            1.9421,
+            1.5786,
+            1.9706
+          ],
+          "se": 0.1262004101928351
+        },
+        "category_revenue": {
+          "base": 7492.343339284261,
+          "new": 6872.100005221367,
+          "pct": -8.278362402464934,
+          "replicates": [
+            -8.2422,
+            -8.4892,
+            -8.1115
+          ],
+          "se": 0.11072228972827837
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 2.459667259373899,
+          "category_units": 2.459667259373899,
+          "category_revenue": -7.687669223683735
+        },
+        "pooled": {
+          "target_units": 2.746229027625513,
+          "category_units": 2.746229027625513,
+          "category_revenue": -7.431274410573652
+        },
+        "elasticity": {
+          "target_units": 3.9771586700531047,
+          "category_units": 3.9771586700531047,
+          "category_revenue": -6.420557196952192
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -9.999999999999998
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          2.4138815631853707,
+          2.5163467622594458
+        ],
+        "category_units": [
+          2.4138815631853707,
+          2.516346762259467
+        ],
+        "category_revenue": [
+          -7.7268957318358495,
+          -7.637626044205118
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 1.359773371104822,
+          "low": 2.0084566596194398,
+          "high": 2.0443671161374466,
+          "highest": 1.8402342116269343
+        },
+        "twin": {
+          "lowest": 2.7740400132481025,
+          "low": 3.062503574668929,
+          "high": 2.4263107346322643,
+          "highest": 1.8012490715780372
+        },
+        "pooled": {
+          "lowest": 3.144679722191235,
+          "low": 3.012536864288573,
+          "high": 2.655979510280182,
+          "highest": 2.287804579970154
+        }
+      }
+    },
+    {
+      "name": "Northwood Skincare -30%",
+      "description": "Northwood Skincare price -30%",
+      "kind": "price",
+      "n_target_products": 5,
+      "categories": [
+        "Skincare"
+      ],
+      "price_change_pct": -30.000000000000004,
+      "truth": {
+        "target_units": {
+          "base": 203.33333333333334,
+          "new": 263.3333333333333,
+          "pct": 29.508196721311464,
+          "replicates": [
+            31.5789,
+            26.4574,
+            30.9645
+          ],
+          "se": 1.6145433448505517
+        },
+        "category_units": {
+          "base": 1950.0,
+          "new": 1969.3333333333333,
+          "pct": 0.991452991452979,
+          "replicates": [
+            0.9689,
+            0.8678,
+            1.1399
+          ],
+          "se": 0.0794096348513398
+        },
+        "category_revenue": {
+          "base": 21655.99955368042,
+          "new": 20959.929567337036,
+          "pct": -3.21421315427155,
+          "replicates": [
+            -3.1828,
+            -3.6195,
+            -2.8291
+          ],
+          "se": 0.22859674457810283
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 30.410997612508673,
+          "category_units": 0.8759560540961386,
+          "category_revenue": -3.333060952401401
+        },
+        "pooled": {
+          "target_units": 34.82227015604473,
+          "category_units": 1.3784092996818487,
+          "category_revenue": -2.8760727695626986
+        },
+        "elasticity": {
+          "target_units": 49.07787146044444,
+          "category_units": 1.2716451455337507,
+          "category_revenue": -2.85685098385986
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -3.43083473424175
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          29.59581767958861,
+          31.176712672536194
+        ],
+        "category_units": [
+          0.841550440666694,
+          0.9133622620528237
+        ],
+        "category_revenue": [
+          -3.4558444980685996,
+          -3.220649588848516
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 12.66375545851528,
+          "low": 26.490066225165563,
+          "high": 42.42424242424243,
+          "highest": 56.122448979591844
+        },
+        "twin": {
+          "lowest": 16.826335414872105,
+          "low": 27.02697059472532,
+          "high": 35.79701828077244,
+          "highest": 62.04963550910001
+        },
+        "pooled": {
+          "lowest": 29.50044214937291,
+          "low": 32.32942046678679,
+          "high": 35.88730100912117,
+          "highest": 46.314111944117165
+        }
+      }
+    },
+    {
+      "name": "25% off Riverridge Eggs",
+      "description": "Riverridge Eggs on promotion at 25% off",
+      "kind": "promotion",
+      "n_target_products": 4,
+      "categories": [
+        "Eggs"
+      ],
+      "price_change_pct": -23.75,
+      "truth": {
+        "target_units": {
+          "base": 807.6666666666666,
+          "new": 2246.6666666666665,
+          "pct": 178.1675608749484,
+          "replicates": [
+            166.9048,
+            178.8557,
+            189.6021
+          ],
+          "se": 6.555219124990173
+        },
+        "category_units": {
+          "base": 7458.333333333333,
+          "new": 7654.333333333333,
+          "pct": 2.627932960893853,
+          "replicates": [
+            2.835,
+            2.6316,
+            2.4164
+          ],
+          "se": 0.12084108342112584
+        },
+        "category_revenue": {
+          "base": 17976.583349784214,
+          "new": 16718.88169225057,
+          "pct": -6.996333135510657,
+          "replicates": [
+            -6.8323,
+            -7.182,
+            -6.9769
+          ],
+          "se": 0.10145199395560625
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 172.78172896744843,
+          "category_units": 3.1061904801730877,
+          "category_revenue": -5.386257324601673
+        },
+        "pooled": {
+          "target_units": 168.19716573644746,
+          "category_units": 3.295855680590498,
+          "category_revenue": -5.473620561973402
+        },
+        "elasticity": {
+          "target_units": 189.35011390338738,
+          "category_units": 2.8924985682187154,
+          "category_revenue": -7.221905094112158
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -2.0578861127290904
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          168.40566989172353,
+          177.12037990121135
+        ],
+        "category_units": [
+          2.9993437968774086,
+          3.207263389654338
+        ],
+        "category_revenue": [
+          -5.481044703822876,
+          -5.273838730199853
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 161.7161716171617,
+          "low": 175.79250720461096,
+          "high": 172.57142857142856,
+          "highest": 187.23205964585276
+        },
+        "twin": {
+          "lowest": 176.07952009038144,
+          "low": 190.3192615372203,
+          "high": 175.56340179694826,
+          "highest": 164.07055881265939
+        },
+        "pooled": {
+          "lowest": 173.61091705545215,
+          "low": 183.30907751261657,
+          "high": 172.6964705826419,
+          "highest": 155.14752462244857
+        }
+      }
+    },
+    {
+      "name": "Everyday Value Baking Supplies Ultra out of stock",
+      "description": "product 842 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Baking Supplies"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 136.0,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 2666.6666666666665,
+          "new": 2651.6666666666665,
+          "pct": -0.5624999999999991,
+          "replicates": [
+            -0.7979,
+            -0.6696,
+            -0.2239
+          ],
+          "se": 0.17394336792966297
+        },
+        "category_revenue": {
+          "base": 8920.666551589966,
+          "new": 9038.649878422419,
+          "pct": 1.322584205452948,
+          "replicates": [
+            1.271,
+            0.9554,
+            1.7386
+          ],
+          "se": 0.22748044055771113
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": -0.15374748817268413,
+          "category_revenue": 1.8219291541428984
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": -0.6739691372445455,
+          "category_revenue": 1.524267011882352
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": -3.3306690738754696e-14,
+          "category_revenue": 2.5335680163872
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -6.412157153446996,
+          "category_revenue": -4.0410454998599965
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          -0.24968581154136527,
+          -0.05709592633248608
+        ],
+        "category_revenue": [
+          1.6785477820389727,
+          1.947587233236816
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": 0.1626016260162677,
+          "low": -0.07189072609633529,
+          "high": -1.1467889908256867,
+          "highest": -0.8513931888544879
+        },
+        "twin": {
+          "lowest": 0.5840735567400612,
+          "low": -0.1817589967564981,
+          "high": -0.6378488895210865,
+          "highest": -0.22583185264573036
+        },
+        "pooled": {
+          "lowest": 0.14338458011000643,
+          "low": -0.34578115711907387,
+          "high": -1.1290354030751404,
+          "highest": -1.0832395843780152
+        }
+      }
+    },
+    {
+      "name": "Pet Toys +20%",
+      "description": "Pet Toys price +20%",
+      "kind": "price",
+      "n_target_products": 54,
+      "categories": [
+        "Pet Toys"
+      ],
+      "price_change_pct": 20.0,
+      "truth": {
+        "target_units": {
+          "base": 568.6666666666666,
+          "new": 480.0,
+          "pct": -15.59202813599062,
+          "replicates": [
+            -17.7281,
+            -14.9013,
+            -14.0845
+          ],
+          "se": 1.1038647064937706
+        },
+        "category_units": {
+          "base": 568.6666666666666,
+          "new": 480.0,
+          "pct": -15.59202813599062,
+          "replicates": [
+            -17.7281,
+            -14.9013,
+            -14.0845
+          ],
+          "se": 1.1038647064937706
+        },
+        "category_revenue": {
+          "base": 3910.479885816574,
+          "new": 3984.839884853362,
+          "pct": 1.9015568730194499,
+          "replicates": [
+            0.146,
+            2.1192,
+            3.4733
+          ],
+          "se": 0.9660501873310322
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -12.75830357465031,
+          "category_units": -12.75830357465031,
+          "category_revenue": 4.5668855172749545
+        },
+        "pooled": {
+          "target_units": -13.526940069759618,
+          "category_units": -13.526940069759618,
+          "category_revenue": 3.419378187243538
+        },
+        "elasticity": {
+          "target_units": -6.526251447038267,
+          "category_units": -6.526251447038267,
+          "category_revenue": 12.168498263554106
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 19.999999999999996
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -12.967451967785514,
+          -12.588451856589897
+        ],
+        "category_units": [
+          -12.967451967785514,
+          -12.588451856589897
+        ],
+        "category_revenue": [
+          4.320176962664165,
+          4.752663634245739
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -7.917888563049857,
+          "low": -10.59190031152648,
+          "high": -16.7032967032967,
+          "highest": -21.90152801358234
+        },
+        "twin": {
+          "lowest": -9.47767755488268,
+          "low": -12.490139596771698,
+          "high": -13.337527149935335,
+          "highest": -14.335922191503114
+        },
+        "pooled": {
+          "lowest": -13.709094147320055,
+          "low": -13.512699944626616,
+          "high": -13.533022408624063,
+          "highest": -13.392984388384466
+        }
+      }
+    },
+    {
+      "name": "Northvale Camping -30%",
+      "description": "Northvale Camping price -30%",
+      "kind": "price",
+      "n_target_products": 17,
+      "categories": [
+        "Camping"
+      ],
+      "price_change_pct": -30.000000000000004,
+      "truth": {
+        "target_units": {
+          "base": 242.66666666666666,
+          "new": 360.0,
+          "pct": 48.35164835164836,
+          "replicates": [
+            50.5929,
+            46.9298,
+            47.3684
+          ],
+          "se": 1.1548821868546815
+        },
+        "category_units": {
+          "base": 861.6666666666666,
+          "new": 946.6666666666666,
+          "pct": 9.864603481624767,
+          "replicates": [
+            10.6358,
+            9.7619,
+            9.2045
+          ],
+          "se": 0.41653382853961696
+        },
+        "category_revenue": {
+          "base": 45757.71696662903,
+          "new": 44982.746944046026,
+          "pct": -1.693637869101261,
+          "replicates": [
+            -1.3623,
+            -1.3845,
+            -2.3012
+          ],
+          "se": 0.30935516274877123
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 48.92539638479869,
+          "category_units": 9.042007612836045,
+          "category_revenue": -1.7556831654916172
+        },
+        "pooled": {
+          "target_units": 47.63511441060844,
+          "category_units": 10.689898853220292,
+          "category_revenue": -2.7446303767016844
+        },
+        "elasticity": {
+          "target_units": 39.75531995208823,
+          "category_units": 3.6491398653139884,
+          "category_revenue": -7.400521620452983
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -9.448451701959915
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          47.51027033827068,
+          50.068944745977234
+        ],
+        "category_units": [
+          8.883187554996168,
+          9.232865796975252
+        ],
+        "category_revenue": [
+          -1.999549445278223,
+          -1.5691352924987396
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 18.354430379746844,
+          "low": 36.224489795918366,
+          "high": 75.96899224806202,
+          "highest": 143.67816091954023
+        },
+        "twin": {
+          "lowest": 25.768248007792472,
+          "low": 43.49330467342889,
+          "high": 63.116539542592285,
+          "highest": 101.68457920953693
+        },
+        "pooled": {
+          "lowest": 41.91757158982341,
+          "low": 44.77468880209607,
+          "high": 50.20177772275072,
+          "highest": 57.89930142968376
+        }
+      }
+    },
+    {
+      "name": "25% off Aspenwell Soft Drinks",
+      "description": "Aspenwell Soft Drinks on promotion at 25% off",
+      "kind": "promotion",
+      "n_target_products": 6,
+      "categories": [
+        "Soft Drinks"
+      ],
+      "price_change_pct": -24.166666666666668,
+      "truth": {
+        "target_units": {
+          "base": 615.6666666666666,
+          "new": 2147.0,
+          "pct": 248.72766648619384,
+          "replicates": [
+            212.9125,
+            274.4792,
+            266.3763
+          ],
+          "se": 19.313917735972392
+        },
+        "category_units": {
+          "base": 8673.666666666666,
+          "new": 8852.333333333334,
+          "pct": 2.059874716575094,
+          "replicates": [
+            2.0066,
+            2.0174,
+            2.1538
+          ],
+          "se": 0.047386643400277755
+        },
+        "category_revenue": {
+          "base": 39873.92892718315,
+          "new": 37683.71740273634,
+          "pct": -5.492841020122496,
+          "replicates": [
+            -5.6415,
+            -5.7605,
+            -5.0797
+          ],
+          "se": 0.209923718777038
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 235.7205952511505,
+          "category_units": 3.3492401158666807,
+          "category_revenue": -3.4935602845813873
+        },
+        "pooled": {
+          "target_units": 224.1171002885768,
+          "category_units": 3.621602626842102,
+          "category_revenue": -3.8425322086329983
+        },
+        "elasticity": {
+          "target_units": 216.6459032897355,
+          "category_units": 1.6388285103932976,
+          "category_revenue": -4.645769142880152
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -1.171554552308074
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          231.3088974054599,
+          239.97535231835496
+        ],
+        "category_units": [
+          3.223312880785527,
+          3.478713296888416
+        ],
+        "category_revenue": [
+          -3.618449257784707,
+          -3.3672324606391393
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 227.77777777777777,
+          "low": 227.77777777777777,
+          "high": 271.0982658959538,
+          "highest": 247.03087885985747
+        },
+        "twin": {
+          "lowest": 200.77397552130338,
+          "low": 231.642068463273,
+          "high": 239.6761120568065,
+          "highest": 250.29367130616754
+        },
+        "pooled": {
+          "lowest": 226.50186468196677,
+          "low": 224.63032315979743,
+          "high": 226.79984197427413,
+          "highest": 220.02978353103276
+        }
+      }
+    },
+    {
+      "name": "Everyday Value Bikes Ultra out of stock",
+      "description": "product 4573 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Bikes"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 49.0,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 697.3333333333334,
+          "new": 673.6666666666666,
+          "pct": -3.39388145315489,
+          "replicates": [
+            -3.2689,
+            -3.3149,
+            -3.5971
+          ],
+          "se": 0.10259237633758927
+        },
+        "category_revenue": {
+          "base": 139633.36047871909,
+          "new": 137946.59689839682,
+          "pct": -1.2079946901939254,
+          "replicates": [
+            -1.075,
+            -0.8026,
+            -1.7792
+          ],
+          "se": 0.2909341422516596
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": -2.0431096619973554,
+          "category_revenue": -0.2605918816784958
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": -3.329893988514998,
+          "category_revenue": -1.0222150501832061
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": 0.0,
+          "category_revenue": 3.3591552625015675
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -8.578745198463512,
+          "category_revenue": -5.507763306752722
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          -2.401842954750772,
+          -1.7190413936063473
+        ],
+        "category_revenue": [
+          -0.44834390294438753,
+          -0.08072241493500447
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": 0.18552875695732052,
+          "low": -0.8080808080808133,
+          "high": -4.016913319238902,
+          "highest": -8.37606837606838
+        },
+        "twin": {
+          "lowest": 0.8120058495938665,
+          "low": -0.035262417468429064,
+          "high": -2.803522026047711,
+          "highest": -5.1399505554113105
+        },
+        "pooled": {
+          "lowest": -1.285850944262934,
+          "low": -1.5878983513209821,
+          "high": -4.068800563436437,
+          "highest": -6.2439062301725805
+        }
+      }
+    },
+    {
+      "name": "Grills & Outdoor -10%",
+      "description": "Grills & Outdoor price -10%",
+      "kind": "price",
+      "n_target_products": 47,
+      "categories": [
+        "Grills & Outdoor"
+      ],
+      "price_change_pct": -10.0,
+      "truth": {
+        "target_units": {
+          "base": 964.3333333333334,
+          "new": 1054.3333333333333,
+          "pct": 9.332872450743167,
+          "replicates": [
+            9.8698,
+            9.9598,
+            8.1883
+          ],
+          "se": 0.5760755671038088
+        },
+        "category_units": {
+          "base": 964.3333333333334,
+          "new": 1054.3333333333333,
+          "pct": 9.332872450743167,
+          "replicates": [
+            9.8698,
+            9.9598,
+            8.1883
+          ],
+          "se": 0.5760755671038088
+        },
+        "category_revenue": {
+          "base": 187969.68923695883,
+          "new": 182910.1103393555,
+          "pct": -2.691699346922416,
+          "replicates": [
+            -2.1462,
+            -2.4466,
+            -3.436
+          ],
+          "se": 0.38962787638007557
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 7.682812385424498,
+          "category_units": 7.682812385424498,
+          "category_revenue": -3.391304443033094
+        },
+        "pooled": {
+          "target_units": 8.42926198421643,
+          "category_units": 8.429261984216406,
+          "category_revenue": -2.472918294866233
+        },
+        "elasticity": {
+          "target_units": 3.9771586700530825,
+          "category_units": 3.9771586700530825,
+          "category_revenue": -6.420557196952226
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -9.999999999999975
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          7.579242652150126,
+          7.8173673576309985
+        ],
+        "category_units": [
+          7.579242652150104,
+          7.81736735763102
+        ],
+        "category_revenue": [
+          -3.5000375908513086,
+          -3.2509685537141975
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 3.2110091743119185,
+          "low": 6.451612903225801,
+          "high": 12.404287901990818,
+          "highest": 16.176470588235304
+        },
+        "twin": {
+          "lowest": 5.117590646604553,
+          "low": 7.756130516718529,
+          "high": 8.92716742342552,
+          "highest": 8.972376244073299
+        },
+        "pooled": {
+          "lowest": 7.908776840764342,
+          "low": 8.626832044184685,
+          "high": 8.847993785600394,
+          "highest": 8.432499542432303
+        }
+      }
+    },
+    {
+      "name": "Corallane Eggs -30%",
+      "description": "Corallane Eggs price -30%",
+      "kind": "price",
+      "n_target_products": 3,
+      "categories": [
+        "Eggs"
+      ],
+      "price_change_pct": -29.999999999999993,
+      "truth": {
+        "target_units": {
+          "base": 231.33333333333334,
+          "new": 377.6666666666667,
+          "pct": 63.25648414985592,
+          "replicates": [
+            55.1587,
+            60.177,
+            75.9259
+          ],
+          "se": 6.256056221225453
+        },
+        "category_units": {
+          "base": 7458.333333333333,
+          "new": 7492.666666666667,
+          "pct": 0.46033519553072555,
+          "replicates": [
+            0.5215,
+            0.282,
+            0.5773
+          ],
+          "se": 0.09058642077468321
+        },
+        "category_revenue": {
+          "base": 17976.583349784214,
+          "new": 17786.82301673095,
+          "pct": -1.05559732548145,
+          "replicates": [
+            -1.0186,
+            -1.1922,
+            -0.9574
+          ],
+          "se": 0.07031487399717301
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 51.781827957689444,
+          "category_units": 0.4831243182132683,
+          "category_revenue": -0.8849375299464279
+        },
+        "pooled": {
+          "target_units": 50.4444896217261,
+          "category_units": 0.4443283514288243,
+          "category_revenue": -0.8938984269665218
+        },
+        "elasticity": {
+          "target_units": 52.799731911680766,
+          "category_units": 0.44784200068823665,
+          "category_revenue": -1.0645115502612823
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -1.1557192566196584
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          49.81309922416225,
+          53.639528243115066
+        ],
+        "category_units": [
+          0.46264629795056633,
+          0.5057053974640313
+        ],
+        "category_revenue": [
+          -0.948649273309255,
+          -0.8202567805980215
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 21.153846153846146,
+          "low": 26.57657657657657,
+          "high": 75.62500000000001,
+          "highest": 144.8717948717949
+        },
+        "twin": {
+          "lowest": 24.47758842421095,
+          "low": 35.6294645434845,
+          "high": 53.26463781074444,
+          "highest": 81.57547692521325
+        },
+        "pooled": {
+          "lowest": 43.41990116808119,
+          "low": 44.74937585417329,
+          "high": 54.173983306748276,
+          "highest": 57.11770517887593
+        }
+      }
+    },
+    {
+      "name": "35% off Aspenwell Bottled Water",
+      "description": "Aspenwell Bottled Water on promotion at 35% off",
+      "kind": "promotion",
+      "n_target_products": 6,
+      "categories": [
+        "Bottled Water"
+      ],
+      "price_change_pct": -34.999999999999986,
+      "truth": {
+        "target_units": {
+          "base": 359.0,
+          "new": 1707.0,
+          "pct": 375.4874651810585,
+          "replicates": [
+            346.4103,
+            403.0395,
+            381.8436
+          ],
+          "se": 16.518778326702968
+        },
+        "category_units": {
+          "base": 7150.666666666667,
+          "new": 7286.333333333333,
+          "pct": 1.8972589968301312,
+          "replicates": [
+            1.7136,
+            2.1207,
+            1.8609
+          ],
+          "se": 0.11902917287790983
+        },
+        "category_revenue": {
+          "base": 23568.993152777355,
+          "new": 21881.977688745665,
+          "pct": -7.1577748489137,
+          "replicates": [
+            -7.4568,
+            -6.8244,
+            -7.1858
+          ],
+          "se": 0.18317308436912402
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 326.23950253497344,
+          "category_units": 3.2698959410315087,
+          "category_revenue": -5.441158022481751
+        },
+        "pooled": {
+          "target_units": 318.4338811674007,
+          "category_units": 2.6726938377752862,
+          "category_revenue": -6.352661789987623
+        },
+        "elasticity": {
+          "target_units": 272.8954799329087,
+          "category_units": 2.122607061998205,
+          "category_revenue": -7.077513175863325
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -1.9407407369159135
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          317.27505097021253,
+          336.1001832857161
+        ],
+        "category_units": [
+          3.137880994787565,
+          3.4150711613143145
+        ],
+        "category_revenue": [
+          -5.558196085269735,
+          -5.326398332534695
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 223.574144486692,
+          "low": 335.8823529411764,
+          "high": 366.9811320754717,
+          "highest": 526.9938650306749
+        },
+        "twin": {
+          "lowest": 268.419203560912,
+          "low": 304.7080945600859,
+          "high": 320.60925901137176,
+          "highest": 394.45969044386067
+        },
+        "pooled": {
+          "lowest": 314.08100955510923,
+          "low": 311.2490666462705,
+          "high": 310.6684059910644,
+          "highest": 335.3415053305734
+        }
+      }
+    },
+    {
+      "name": "Goldencrest Ice Cream Deluxe out of stock",
+      "description": "product 1303 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Ice Cream"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 276.0,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 6080.333333333333,
+          "new": 6055.666666666667,
+          "pct": -0.40567951318457585,
+          "replicates": [
+            -0.2773,
+            -0.3252,
+            -0.6208
+          ],
+          "se": 0.10741358019431442
+        },
+        "category_revenue": {
+          "base": 23475.69640103976,
+          "new": 23360.943052768707,
+          "pct": -0.4888176534178168,
+          "replicates": [
+            -0.2603,
+            -0.5103,
+            -0.7007
+          ],
+          "se": 0.12753558541962046
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": -0.599362828365213,
+          "category_revenue": -0.662791638696203
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": -0.7829761782481848,
+          "category_revenue": -0.8895834515768364
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": 2.220446049250313e-14,
+          "category_revenue": -0.035122012417199144
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -5.282575884621831,
+          "category_revenue": -5.315842550080907
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          -0.6609364435423087,
+          -0.5231736484251026
+        ],
+        "category_revenue": [
+          -0.7285931502330961,
+          -0.5868898797948446
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": -0.8686496446433267,
+          "low": -0.5342831700801409,
+          "high": -0.22186365469947233,
+          "highest": -0.1962387571545432
+        },
+        "twin": {
+          "lowest": -1.164915207260131,
+          "low": -0.661428720468149,
+          "high": -0.3925686435475084,
+          "highest": -0.3850550191858759
+        },
+        "pooled": {
+          "lowest": -1.4900092410058519,
+          "low": -0.7321595403855019,
+          "high": -0.5800525464560891,
+          "highest": -0.5008569249315364
+        }
+      }
+    },
+    {
+      "name": "Coffee +10%",
+      "description": "Coffee price +10%",
+      "kind": "price",
+      "n_target_products": 81,
+      "categories": [
+        "Coffee"
+      ],
+      "price_change_pct": 10.000000000000007,
+      "truth": {
+        "target_units": {
+          "base": 4411.333333333333,
+          "new": 4291.666666666667,
+          "pct": -2.712709687169401,
+          "replicates": [
+            -2.7234,
+            -2.7181,
+            -2.6966
+          ],
+          "se": 0.008201955247117473
+        },
+        "category_units": {
+          "base": 4411.333333333333,
+          "new": 4291.666666666667,
+          "pct": -2.712709687169401,
+          "replicates": [
+            -2.7234,
+            -2.7181,
+            -2.6966
+          ],
+          "se": 0.008201955247117473
+        },
+        "category_revenue": {
+          "base": 28742.21916794777,
+          "new": 30679.09078048864,
+          "pct": 6.738768503654025,
+          "replicates": [
+            6.8737,
+            6.6767,
+            6.666
+          ],
+          "se": 0.06752043643882819
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -3.0456217124539386,
+          "category_units": -3.0456217124539386,
+          "category_revenue": 6.473968575494604
+        },
+        "pooled": {
+          "target_units": -3.1055019911476522,
+          "category_units": -3.1055019911476522,
+          "category_revenue": 6.385023419100655
+        },
+        "elasticity": {
+          "target_units": -3.466564042175724,
+          "category_units": -3.466564042175724,
+          "category_revenue": 6.186779553606714
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": 10.000000000000009
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -3.1022687828552105,
+          -2.9849670060321
+        ],
+        "category_units": [
+          -3.1022687828552113,
+          -2.98496700603212
+        ],
+        "category_revenue": [
+          6.4087431593088855,
+          6.541642366745017
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": -1.7932086989698615,
+          "low": -2.9460580912863077,
+          "high": -2.6043125175021054,
+          "highest": -3.1951640759930955
+        },
+        "twin": {
+          "lowest": -2.8198917924270095,
+          "low": -3.24105348132141,
+          "high": -3.2379682280060718,
+          "highest": -2.9221814126093926
+        },
+        "pooled": {
+          "lowest": -3.716547545048532,
+          "low": -3.3483203324297217,
+          "high": -3.0056557156084462,
+          "highest": -2.640863549351624
+        }
+      }
+    },
+    {
+      "name": "Goldencrest Seafood -15%",
+      "description": "Goldencrest Seafood price -15%",
+      "kind": "price",
+      "n_target_products": 2,
+      "categories": [
+        "Seafood"
+      ],
+      "price_change_pct": -15.0,
+      "truth": {
+        "target_units": {
+          "base": 144.33333333333334,
+          "new": 176.66666666666666,
+          "pct": 22.401847575057722,
+          "replicates": [
+            28.7879,
+            22.8758,
+            16.2162
+          ],
+          "se": 3.6312643726167293
+        },
+        "category_units": {
+          "base": 5788.666666666667,
+          "new": 5803.0,
+          "pct": 0.24761027294712967,
+          "replicates": [
+            0.1727,
+            0.3827,
+            0.1888
+          ],
+          "se": 0.06747079854326661
+        },
+        "category_revenue": {
+          "base": 50380.11200841268,
+          "new": 50305.01701119741,
+          "pct": -0.14905682862065284,
+          "replicates": [
+            -0.1367,
+            -0.0411,
+            -0.2663
+          ],
+          "se": 0.06524674973249352
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 15.008651854661537,
+          "category_units": 0.15413626329705554,
+          "category_revenue": -0.2947965026680044
+        },
+        "pooled": {
+          "target_units": 18.15805561426833,
+          "category_units": 0.16588068794392008,
+          "category_revenue": -0.27451919977514727
+        },
+        "elasticity": {
+          "target_units": 21.412923500557703,
+          "category_units": 0.2075530353626842,
+          "category_revenue": -0.3690789789663196
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -0.7211113962429683
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          14.261895260859578,
+          15.830121572129514
+        ],
+        "category_units": [
+          0.1462005951849199,
+          0.16143131616820458
+        ],
+        "category_revenue": [
+          -0.3256567408679556,
+          -0.26166723138598363
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 6.666666666666665,
+          "low": 10.97560975609757,
+          "high": 50.0,
+          "highest": 71.73913043478262
+        },
+        "twin": {
+          "lowest": 8.341953441683758,
+          "low": 15.534101795905286,
+          "high": 19.812703635711348,
+          "highest": 34.97834005315508
+        },
+        "pooled": {
+          "lowest": 15.016707996900136,
+          "low": 17.277855154816034,
+          "high": 20.360679678064585,
+          "highest": 23.853294547956374
+        }
+      }
+    },
+    {
+      "name": "35% off Rivermark Yogurt",
+      "description": "Rivermark Yogurt on promotion at 35% off",
+      "kind": "promotion",
+      "n_target_products": 4,
+      "categories": [
+        "Yogurt"
+      ],
+      "price_change_pct": -33.104166651532665,
+      "truth": {
+        "target_units": {
+          "base": 712.0,
+          "new": 2228.0,
+          "pct": 212.92134831460677,
+          "replicates": [
+            217.934,
+            197.948,
+            223.4463
+          ],
+          "se": 7.745928166485101
+        },
+        "category_units": {
+          "base": 8508.0,
+          "new": 8816.0,
+          "pct": 3.6201222378937414,
+          "replicates": [
+            4.0773,
+            2.9173,
+            3.881
+          ],
+          "se": 0.3584387678150531
+        },
+        "category_revenue": {
+          "base": 28427.419824123383,
+          "new": 28162.272113738698,
+          "pct": -0.9327181714876565,
+          "replicates": [
+            -0.5546,
+            -1.5731,
+            -0.6554
+          ],
+          "se": 0.32400057185220515
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": 175.76816449236415,
+          "category_units": 4.072601096964279,
+          "category_revenue": -0.31119682504436863
+        },
+        "pooled": {
+          "target_units": 185.04426365303442,
+          "category_units": 3.615347482993414,
+          "category_revenue": -0.8743761444001463
+        },
+        "elasticity": {
+          "target_units": 229.41343355719846,
+          "category_units": 2.1399896728872436,
+          "category_revenue": -2.4051135870115314
+        },
+        "no_reaction": {
+          "target_units": 0.0,
+          "category_units": 0.0,
+          "category_revenue": -3.0974254352340025
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          171.33036694735114,
+          180.53281249924143
+        ],
+        "category_units": [
+          3.9476257895280065,
+          4.209792676292795
+        ],
+        "category_revenue": [
+          -0.4373001949494376,
+          -0.17862001334773453
+        ]
+      },
+      "segments_measure": "target",
+      "segments": {
+        "truth": {
+          "lowest": 126.1467889908257,
+          "low": 151.29740518962075,
+          "high": 244.44444444444446,
+          "highest": 361.1111111111111
+        },
+        "twin": {
+          "lowest": 111.16666038682408,
+          "low": 153.41151817248604,
+          "high": 201.67773759519454,
+          "highest": 266.3231457807643
+        },
+        "pooled": {
+          "lowest": 152.01795717326246,
+          "low": 171.91382928841662,
+          "high": 198.7503283190018,
+          "highest": 224.9094473082218
+        }
+      }
+    },
+    {
+      "name": "Everyday Value Fresh Fruit Fresh out of stock",
+      "description": "product 277 out of stock",
+      "kind": "stock-out",
+      "n_target_products": 1,
+      "categories": [
+        "Fresh Fruit"
+      ],
+      "price_change_pct": null,
+      "truth": {
+        "target_units": {
+          "base": 386.0,
+          "new": 0.0,
+          "pct": -100.0,
+          "replicates": [
+            -100.0,
+            -100.0,
+            -100.0
+          ],
+          "se": 0.0
+        },
+        "category_units": {
+          "base": 9179.666666666666,
+          "new": 9132.666666666666,
+          "pct": -0.5120011619884512,
+          "replicates": [
+            -0.2475,
+            -0.7576,
+            -0.5362
+          ],
+          "se": 0.1476647419500788
+        },
+        "category_revenue": {
+          "base": 31551.869744141895,
+          "new": 31374.673070192337,
+          "pct": -0.5616043530429993,
+          "replicates": [
+            -0.1567,
+            -0.843,
+            -0.6951
+          ],
+          "se": 0.2085275359859491
+        }
+      },
+      "predictions": {
+        "twin": {
+          "target_units": -100.0,
+          "category_units": -0.25373868031481894,
+          "category_revenue": -0.2592480719284751
+        },
+        "pooled": {
+          "target_units": -100.0,
+          "category_units": -0.7344764713167806,
+          "category_revenue": -0.5988863670266964
+        },
+        "elasticity": {
+          "target_units": -100.0,
+          "category_units": -2.220446049250313e-14,
+          "category_revenue": 0.32835948635872025
+        },
+        "no_reaction": {
+          "target_units": -100.0,
+          "category_units": -5.225988700564976,
+          "category_revenue": -4.914789243860551
+        }
+      },
+      "twin_bands": {
+        "target_units": [
+          -100.0,
+          -100.0
+        ],
+        "category_units": [
+          -0.3169219937000267,
+          -0.1906800912960677
+        ],
+        "category_revenue": [
+          -0.31917964345727357,
+          -0.19504954298739058
+        ]
+      },
+      "segments_measure": "category",
+      "segments": {
+        "truth": {
+          "lowest": 0.32406617772471336,
+          "low": 0.13908205841446364,
+          "high": -0.8618331053351524,
+          "highest": -1.1143255116254136
+        },
+        "twin": {
+          "lowest": 0.35421458012663276,
+          "low": 0.04456422052294684,
+          "high": -0.4509899987098387,
+          "highest": -0.6483794695896661
+        },
+        "pooled": {
+          "lowest": -0.01522961824775848,
+          "low": -0.28414849859662583,
+          "high": -0.8173705370765227,
+          "highest": -1.4218780290798816
+        }
+      }
+    }
+  ],
+  "runtime_seconds": 1080.1
+}

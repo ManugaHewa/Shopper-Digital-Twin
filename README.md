@@ -18,6 +18,7 @@ python scripts/inspect_world.py --world data/worlds/small
 python scripts/run_baselines.py --world data/worlds/small   # tune and score the baselines (~10 min)
 python scripts/run_twin.py --world data/worlds/small        # fit and score the shopper twin (~5 min)
 python scripts/run_whatif.py --world data/worlds/small      # ask the twin five what-if questions (~2 min)
+python scripts/evaluate_twin.py --world data/worlds/small   # score the twin against the true store (~15 min)
 pytest
 ```
 
@@ -102,14 +103,37 @@ The fitted twin (trained on days 0-151) answers five questions about days 152-17
 
 How to read it: a 20% dearer coffee loses 6% of its sales, all of them to "buy nothing" because every coffee got dearer, so revenue still rises 12%. Cheaper store-brand milk sells 12.5% more, but two thirds of that is taken from other milk brands, so the category only grows 1.5% and its revenue falls. When the best-selling cereal is out of stock, 89% of its sales move to other cereals. `reports/small/whatif.md` also shows which products gain, and how different households react.
 
-These are the twin's predictions. The simulated store can be re-run with the same change to get the true answer, which is what milestone 5 does. Before trusting the answers, the report checks the twin's normal sales: with no change, it predicts 229,371 units in the 4 weeks against 232,862 really sold (1.5% low; 3.6% average error per category).
+These are the twin's predictions; the next section checks them against the true answer. Before trusting the answers, the report checks the twin's normal sales: with no change, it predicts 229,371 units in the 4 weeks against 232,862 really sold (1.5% low; 3.6% average error per category).
+
+## How right is the twin? Checked against the true store
+
+Because the store is simulated, it can be re-run from day 152 with any change applied, using the same random numbers as the unchanged run, so the only difference is the change itself. That gives the **true** effect of each scenario, which a real retailer never gets to see. From `scripts/evaluate_twin.py`: 29 scenarios (the five above plus 24 random price changes, promotions and stock-outs), each run 3 times through the true store, and the same questions put to three simpler methods.
+
+Average miss in percentage points (if the truth is -5.3% and a method says -6.1%, it missed by 0.8):
+
+| Method | Changed products' units | Whole category's units | Category revenue |
+|---|---|---|---|
+| **Shopper twin** | **8.1** | **0.7** | **0.8** |
+| Twin without personal traits (group values only) | 10.7 | 0.7 | 0.9 |
+| Store-wide elasticity model (the classic pricing model) | 14.3 | 1.5 | 1.5 |
+| No reaction (sales stay as they were) | 82.3 | 4.2 | 4.3 |
+
+![Evaluation against the true store](reports/small/evaluation.png)
+
+- **Accuracy.** The twin's misses are about half those of the store-wide elasticity model, which is fitted to the store's own weekly sales with one switching elasticity (-1.23), one category elasticity (-0.37) and a promotion lift for each. The changed products' units are scored on the 22 price and promotion scenarios; a typical twin answer is within 14% of the true change.
+- **Who reacts.** Split the shoppers into four groups by their true price sensitivity. The twin gets each group's reaction within 14.7 points on average, against 22.6 without personal traits, and it sees much more of the gap between the most and least price-sensitive group (47 points of the true 78, against 19).
+- **What it learned.** Learned vs true values, rank correlation over 10,000 shoppers: price sensitivity 0.79 (the public profile alone gives 0.30), store-brand liking 0.84, habit 0.55, brand loyalty 0.13 (the store uses a hidden favourite brand that the twin can only approximate). Within a category, the twin orders products by each shopper's taste with a correlation of 0.64, against 0.40 for a popularity list.
+- **Purchase chances.** Its chances of each shopper buying each product are well calibrated up to about 40%, and a little too high above that (70% predicted, 60% bought). Log loss is 18% better than a forecast from each shopper's own history.
+- **Honest ranges.** The what-if report's 90% bands (from resampling shoppers) contain the truth only about 10% of the time, because they leave out the model's own error. Against the truth, 90% of the twin's misses are under 22% of the true change for the changed products, and under 1.4 points for a whole category.
 
 ## Project structure
 
 ```
 src/shopper_twin/world/      fake store generator (spec, catalogue, population, simulator, saving)
+src/shopper_twin/keyed_random.py  random numbers tied to what they are for, so what-if runs differ only by the change
 src/shopper_twin/data.py     loads a world's public data only (never the answer key)
-src/shopper_twin/eval/       time-based splits, ranking metrics, scoring and tuning harness
+src/shopper_twin/eval/       time-based splits, ranking metrics, scoring and tuning harness; the true store
+                             rebuilt from the answer key, simpler what-if methods, trait recovery and calibration
 src/shopper_twin/baselines/  popularity, buy again, repurchase cycle, item-to-item, ALS, blend
 src/shopper_twin/twin/       the shopper twin: trips, choice model, trip-rate model, predictions
 src/shopper_twin/sim/        what-if scenarios (price changes, promotions, stock-outs) asked of the twin
@@ -126,7 +150,7 @@ reports/                     sanity-check charts, baseline, twin and what-if res
 - [x] Milestone 2: baseline recommenders and evaluation harness
 - [x] Milestone 3: twin model v1
 - [x] Milestone 4: what-if engine
-- [ ] Milestone 5: evaluation against the hidden answer key
+- [x] Milestone 5: evaluation against the hidden answer key
 - [ ] Milestone 6: upgrades (skipped items bought later, life events)
 - [ ] Milestone 7: demo app
 - [ ] Milestone 8: write-up
