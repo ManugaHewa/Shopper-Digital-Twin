@@ -1,0 +1,135 @@
+{
+  "world": "small",
+  "protocol": {
+    "horizon_days": 28,
+    "test_cutoff_day": 152,
+    "tuned": false,
+    "validation_cutoff_day": null,
+    "selection_metric": null
+  },
+  "settings": {
+    "dim": 16,
+    "epochs": 8,
+    "taste_reg": 1.0,
+    "trait_reg": 2.0
+  },
+  "test": [
+    {
+      "model": "Shopper twin",
+      "mode": "all",
+      "users": 9569,
+      "ms_per_user": 2.2107,
+      "hit_rate@10": 0.9335353746472985,
+      "precision@10": 0.3138049952973142,
+      "recall@10": 0.23332110430679878,
+      "ndcg@10": 0.37733331659225516,
+      "mrr@10": 0.6607550506181502,
+      "coverage@10": 0.6934,
+      "hit_rate@20": 0.9598704148813878,
+      "precision@20": 0.21757759431497545,
+      "recall@20": 0.30873990638870735,
+      "ndcg@20": 0.35459090817505406,
+      "mrr@20": 0.662652171106284,
+      "coverage@20": 0.8084,
+      "fit_seconds": 71.9,
+      "params": {
+        "dim": 16,
+        "epochs": 8,
+        "taste_reg": 1.0,
+        "trait_reg": 2.0
+      }
+    },
+    {
+      "model": "Shopper twin",
+      "mode": "new",
+      "users": 9519,
+      "ms_per_user": 2.2107,
+      "hit_rate@10": 0.4491017964071856,
+      "precision@10": 0.06084672759743671,
+      "recall@10": 0.07135866859833846,
+      "ndcg@10": 0.07802862309597479,
+      "mrr@10": 0.17868715367927468,
+      "coverage@10": 0.417,
+      "hit_rate@20": 0.6242252337430403,
+      "precision@20": 0.05158104842945688,
+      "recall@20": 0.11935831481734265,
+      "ndcg@20": 0.09435814989254374,
+      "mrr@20": 0.19087148296552528,
+      "coverage@20": 0.5428,
+      "fit_seconds": 71.9,
+      "params": {
+        "dim": 16,
+        "epochs": 8,
+        "taste_reg": 1.0,
+        "trait_reg": 2.0
+      }
+    },
+    {
+      "model": "Shopper twin (knows price plan)",
+      "mode": "all",
+      "users": 9569,
+      "ms_per_user": 2.2258,
+      "hit_rate@10": 0.9344759117985161,
+      "precision@10": 0.31435886717525346,
+      "recall@10": 0.23357290360372363,
+      "ndcg@10": 0.37830094585195634,
+      "mrr@10": 0.6621329292507053,
+      "coverage@10": 0.6896,
+      "hit_rate@20": 0.9599749190093009,
+      "precision@20": 0.21869056327724945,
+      "recall@20": 0.31007284573467425,
+      "ndcg@20": 0.3559684164503509,
+      "mrr@20": 0.663976581563049,
+      "coverage@20": 0.8028,
+      "fit_seconds": 71.9,
+      "params": {
+        "dim": 16,
+        "epochs": 8,
+        "taste_reg": 1.0,
+        "trait_reg": 2.0
+      }
+    },
+    {
+      "model": "Shopper twin (knows price plan)",
+      "mode": "new",
+      "users": 9519,
+      "ms_per_user": 2.2258,
+      "hit_rate@10": 0.4673810274188465,
+      "precision@10": 0.06497531253282908,
+      "recall@10": 0.07481239778359326,
+      "ndcg@10": 0.08388822833542416,
+      "mrr@10": 0.19303323178204992,
+      "coverage@10": 0.396,
+      "hit_rate@20": 0.6355709633364849,
+      "precision@20": 0.05421262737682529,
+      "recall@20": 0.12438167391570826,
+      "ndcg@20": 0.10011059854152789,
+      "mrr@20": 0.20475605158242083,
+      "coverage@20": 0.522,
+      "fit_seconds": 71.9,
+      "params": {
+        "dim": 16,
+        "epochs": 8,
+        "taste_reg": 1.0,
+        "trait_reg": 2.0
+      }
+    }
+  ],
+  "validation_trials": [],
+  "learned": {
+    "price_sensitivity_p10_median_p90": [
+      0.79,
+      1.62,
+      2.65
+    ],
+    "median_shopper_10pct_price_rise_effect": 0.143,
+    "share_liking_store_brand": 0.417,
+    "habit_median": 1.01,
+    "promo_effect_on_choice": 0.48,
+    "promo_effect_on_views": 1.01,
+    "habit_effect_on_views": 2.12,
+    "expected_trips_per_shopper_in_window": 23.9
+  },
+  "model_file": "models/small/twin_day152.pt",
+  "runtime_seconds": 123.9
+}
